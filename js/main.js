@@ -16,6 +16,11 @@ function topFunction(){
   function toggleNav(x) {
     x.classList.toggle("active");
   }
+  function removeActive() {
+    var element = document.getElementById("iconToggle");
+    element.classList.remove("active");
+  }
+  
 
   // Reveal Website Elements On Scroll
   function reveal(){
@@ -33,3 +38,34 @@ function topFunction(){
     }
   }
   window.addEventListener('scroll', reveal);
+
+
+
+
+  //Login form code start from here 
+
+  let loginForm = document.getElementById("loginForm");
+
+loginForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  let username = document.getElementById("userName");
+  let email = document.getElementById("email");
+  let subject = document.getElementById("subject");
+  let name = document.getElementById("name");
+
+  if (username.value == "" || email.value == "" || subject.value == "" || name.value == "") {
+    alert("Ensure you input a value in both fields!");
+  } else {
+    // perform operation with form input
+    alert("This form has been successfully submitted!");
+    console.log(
+      `This form has a username of ${username.value} password of ${email.value} subject of ${subject.value} and name of ${name.value}`
+    );
+
+    username.value = "";
+    email.value = "";
+    subject.value = "";
+    name.value = "";
+  }
+});

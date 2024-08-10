@@ -12,12 +12,12 @@
     <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
     <header class="header">
         <a href="#" class="logo">Portfolio</a>
-        <span class="iconToggle" onclick="toggleNav(this)">
+        <span class="iconToggle" id="iconToggle" onclick="toggleNav(this)">
             <span class="material-symbols-outlined menuIcon">menu</span>
             <span class="material-symbols-outlined CloseIcon">close</span>
         </span>
-        <nav class="navbar">
-            <a href="#home" style="--i:1" class="active">Home</a>
+        <nav class="navbar" onclick="removeActive()">
+            <a href="#home" style="--i:1" >Home</a>
             <a href="#about" style="--i:2">About</a>
             <a href="#services" style="--i:3">Services</a>
             <a href="#skill" style="--i:3">Skills</a>
@@ -30,21 +30,22 @@
             <img src="img/asif-circle-img.png" />
         </div>
         <div class="home-content">
-            <h3>Hello, It's Me</h3>
+            <h3>Hello, Myself</h3>
             <h1>Asif Aleem</h1>
-            <h3>And I am a <span id="text"></span></h3>
-            <p>I'm a web designer with extensive experience for over 11 years</p>
+            <h3><span id="text"></span></h3>
+            <p>I am a Senior UI Developer with extensive experience of 11 years 6 months</p>
             <div class="home-sci">
-                <a href="#" style="--i:7"><span class="material-symbols-outlined">phone_in_talk</span></a>
-                <a href="#" style="--i:7"><span class="material-symbols-outlined">attach_email</span></a>
-                <a href="#" style="--i:7"><span class="material-symbols-outlined">slideshow</span></a>
-                <a href="#" style="--i:7"><span class="material-symbols-outlined">location_on</span></a>
+                <a href="#contact" style="--i:7"><span class="material-symbols-outlined" title="Contact">phone_in_talk</span></a>
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=asifaleemkhan@gmail.com" target="_blank" style="--i:7" title="Email"><span class="material-symbols-outlined">attach_email</span></a>
+                <a href="https://linkedin.com/in/asif-aleem-99aa7516a" style="--i:7" target="_blank" title="linkedIn"><span class="material-symbols-outlined">connect_without_contact</span></a>
+                <a href="#contact" style="--i:7"><span class="material-symbols-outlined" title="Contact">location_on</span></a>
             </div>
             
-            <a href="#" class="btn-box">More about Me</a>
+            <a href="#about" class="btn-box">More about Me</a>
         </div>
     </section>
-    <section class="about reveal" id="about">
+    <section id="about">
+        <div class="reveal about">
         <div class="about-img">
             <img src="img/asif-profile-img.png" height="200" />
         </div>
@@ -54,9 +55,10 @@
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
             <a href="#" class="btn-box">More about me</a>
         </div>
-
+    </div>
     </section>
-    <section class="services reveal" id="services">
+    <section class="services" id="services">
+        <div class="reveal">
         <div class="container">
             <h1 class="sub-title">My <span>Services</span></h1>
             <div class="services-list">
@@ -80,8 +82,10 @@
                 </div>
             </div>
         </div>
+    </div>
     </section>
-    <section class="skill reveal" id="skill">
+    <section class="skill" id="skill">
+        <div class="reveal">
         <h1 class="sub-title">My <span>Skills</span></h1>
         <div class="skillContainer">
         <div class="container">
@@ -175,8 +179,10 @@
             </div>
         </div>
         </div>
+    </div>
     </section>
-    <section class="portfolio reveal" id="portfolio">
+    <section class="portfolio" id="portfolio">
+        <div class="reveal">
         <div class="main-text">
             <h2>Latest <span>Project</span></h2>
             <div class="portfolio-content">
@@ -206,10 +212,12 @@
                 </div>
             </div>
         </div>
+    </div>
     </section>
-    <section class="contact reveal" id="contact">
+    <section class="" id="contact">
+        <div class="reveal contact">
         <div class="contact-text">
-            <h2>Contact<span>Me</span></h2>
+            <h2>Contact <span>Me</span></h2>
             <h4>Let's work together</h4>
             <p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum v Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum</p>
             <div class="conatct-list">
@@ -226,14 +234,15 @@
             </div>
         </div>
         <div class="contact-form">
-            <form action="">
-                <input type="" placeholder="Enter you name" required />
-                <input type="email" placeholder="Enter you email" required />
-                <input type="" placeholder="Enter your subject" required />
-                <textarea name="" id="" cols="40" rows="10" placeholder="Enter you details"></textarea>
-                <input type="submit" value="submit" class="send"/>
+            <form id="loginForm" method="POST" action="sendmail.php">
+                <input type="text" placeholder="Enter you name" id="userName" name="userName" />
+                <input type="email" placeholder="Enter you email" id="email" name="email" />
+                <input type="text" placeholder="Enter your subject" id="subject" name="subject" />
+                <textarea id="name" cols="40" rows="10" placeholder="Enter you details" name="name"></textarea>
+                <button type="submit" value="submit" class="send">Submit</button>
             </form> 
         </div>
+    </div>
     </section>
     <div class="last-text">
         <p>Developed by Asif Aleem @2024</p>

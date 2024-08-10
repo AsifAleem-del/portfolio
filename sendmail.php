@@ -2,12 +2,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if(
         !empty($_POST['name'])
         && !empty($_POST['email'])
-        && !empty($_POST['message'])
+        && !empty($_POST['subject'])
     ){
         $name = $_POST["userName"];
         $email = $_POST["email"];
-        $phone = $_POST["subject"];
-        $message = $_POST["name"];
+        $subject = $_POST["subject"];
+        $name = $_POST["name"];
 
 
         $to = "asifaleemkhan@gmail.com";

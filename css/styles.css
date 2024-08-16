@@ -184,6 +184,7 @@ body {color: #ededed; background-color: #081b29;}
   .portfolio .reveal {top: 0px; padding-top:100px;}
   .portfolio-content {grid-template-columns: repeat(auto-fit, minmax(250px, auto));}
   .header {padding: 8px 10%;}
-
-.contact.reveal {margin-top:0px; padding-top: 100px;}
+  .about-img img {width: 80%;}
+  .contact.reveal {margin-top:0px; padding-top: 100px;}
+  .whatsAppChat {position: fixed; right: 30px; bottom: 70px;}
 }

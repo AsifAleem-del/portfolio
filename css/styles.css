@@ -1,10 +1,10 @@
 html {scroll-behavior: smooth;}
 * {margin:0px; padding:0px; box-sizing: border-box; font-family: 'poppins', sans-serif;}
 body {color: #ededed; background-color: #081b29;}
-.header {position:sticky; top: 0; left: 0; width: 100%; padding: 20px 10%; background:#051129; display: flex; justify-content: space-between; align-items: center; z-index: 100;}
+.header {position:sticky; top: 0; left: 0; width: 100%; padding: 12px 10%; background:#051129; display: flex; justify-content: space-between; align-items: center; z-index: 100;}
 .logo {position: relative; font-size: 25px; color: #fff; text-decoration: none; font-weight: 600; cursor: default; opacity: 0; animation: slideRight 1s ease forwards;}
-.navbar a {display:inline-block; font-size: 25px; color: #fff; text-decoration: none; font-weight: 500; margin-left: 35px; transition: .3s; opacity: 0; animation: slideTop .5s ease forwards; animation-delay: calc(.2s * var(--i));}
-.navbar a:hover {color: #0ef;}
+.navbar a {display:inline-block; font-size:14px; color: #fff; text-decoration: none; font-weight: 500; border: solid 1px #051129; margin-left:12px; padding: 8px 16px; transition: .3s; opacity: 0; animation: slideTop .5s ease forwards; animation-delay: calc(.2s * var(--i));}
+.navbar a:hover {color: #0ef; border:solid 1px #0ef; border-radius: 4px; transition: 1s ease;}
 .home {position: relative; width: 100%; display: flex; align-items: center; padding:50px 10% 0; justify-content: space-between; height: 100vh; background-color: #000;}
 .home .profile-pic img {width: 50%;}
 .home-content {max-width: 600px;}
@@ -14,8 +14,8 @@ body {color: #ededed; background-color: #081b29;}
 .home-content p {font-size: 20px; opacity: 0; margin-top: 8px; animation: slideLeft 1s ease forwards;}
 .home-sci a {display: inline-flex; justify-content: center; align-items: center; width: 40px; height:40px; background:transparent; border:solid 2px #0ef; border-radius: 50%; font-size: 20px; color: #0ef; text-decoration: none; margin: 30px 15px 30px 0px; transition: .5s ease; opacity: 0; animation: slideBottom 1s ease forwards; animation-delay:calc(.2s * var(--i));}
 .home-sci a:hover {background: #0ef; color: #081b29; box-shadow: 0 0 20px #0ef;}
-.btn-box {display: inline-block; padding: 12px 28px; background:#0ef; border-radius: 40px; font-size: 16px; color: #081b29; letter-spacing: 1px; text-decoration: none; font-weight: 600; opacity: 0; animation: slideTop 1s ease forwards; animation-delay: 2s; box-shadow: 0 0 5px #0ef, 0 0 25px #0ef}
-.btn-box:hover {box-shadow: 0 0 5px cyan, 0 0 25px cyan, 0 0 100px cyan, 0 0 200px cyan}
+.btn-box {display: inline-block; padding: 12px 28px; background:#000; border-radius: 40px; border: 1px solid #0ef; font-size: 16px; color: #0ef; letter-spacing: 1px; text-decoration: none; font-weight: 600; opacity: 0; animation: slideTop 1s ease forwards; animation-delay: 2s; box-shadow: 0 0 5px #0ef, 0 0 25px #0ef}
+.btn-box:hover {box-shadow: 0 0 5px cyan, 0 0 25px cyan, 0 0 100px cyan, 0 0 200px cyan; background: #0ef; color: #000;}
 .about {display: grid; grid-template-columns: repeat(2, 1fr); align-items: center; gap: 1.5rem; padding: 32px; padding-top: 90px;}
 .about-img {display: flex; justify-content: center;}
 .about-img img {padding-bottom:10%; max-width:400px; height: auto; width: 100%; border-radius: 8px;}
@@ -79,14 +79,14 @@ body {color: #ededed; background-color: #081b29;}
 .main-text h2 {font-size: 60px; line-height: 1; text-align: center; margin-bottom: 32px;}
 .main-text h2 span {color: #0ef;}
 .portfolio-content {display: grid; gap: 32px; padding: 0px 32px; grid-template-columns: repeat(auto-fit, minmax(350px, auto));}
-.row {position:relative; overflow: hidden; border-radius: 8px; cursor: pointer;}
-.row img {width: 100%; border-radius: 8px; display: block; transition:transform 0.5s;}
-.layer {width: 100%; height: 0; background: linear-gradient(rgba(0,0,0,0.1),#0ef); position: absolute; border-radius: 8px; left: 0; bottom: 0; overflow: hidden; display: flex; flex-direction: column; align-items: center; padding: 0 40px; transition: height 0.5s;}
-.layer h5 {color:#000; font-size: 20px; font-weight: 600; margin-bottom: 15px;}
-.layer p {color: #000; font-size: 1rem; line-height: 1.8;}
-.layer i {color: #ff004f; margin-top: 20px;  font-size: 20px; background: #fff; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; border-radius: 50%;}
-.row:hover img {transform:scale(1.1);}
-.row:hover .layer {height: 100%;}
+.portfolio-content .row {position:relative; overflow: hidden; border-radius: 8px; cursor: pointer;}
+.portfolio-content .row img {width: 100%; border-radius: 8px; display: block; transition:transform 0.5s;}
+.portfolio-content .layer {width: 100%; height: 0; background: linear-gradient(rgba(0,0,0,0.1),#0ef); position: absolute; border-radius: 8px; left: 0; bottom: 0; overflow: hidden; display: flex; flex-direction: column; align-items: center; padding: 0 40px; transition: height 0.5s;}
+.portfolio-content .layer h5 {color:#000; font-size: 20px; font-weight: 600; margin-bottom: 15px;}
+.portfolio-content .layer p {color: #000; font-size: 1rem; line-height: 1.8;}
+.portfolio-content .layer i {color: #ff004f; margin-top: 20px;  font-size: 20px; background: #fff; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; border-radius: 50%;}
+.portfolio-content .row:hover img {transform:scale(1.1);}
+.portfolio-content .row:hover .layer {height: 100%;}
 .contact {display: grid; grid-template-columns: repeat(2, 1fr); align-items: center; gap: 3rem; padding:0px 32px; margin-top:230px;}
 .contact-text h2 {font-size:60px; line-height: 1; text-align: center; margin:0px 0px 50px 0px;}
 .contact-text h2 span {color: #0ef;}

@@ -184,7 +184,8 @@ body {color: #ededed; background-color: #081b29;}
   .about-text h4 {margin:0px;}
   .portfolio {padding-top: 0px; top: 0px;}
   .portfolio .reveal {top: 0px; padding-top:100px;}
-  .portfolio-content {grid-template-columns: repeat(auto-fit, minmax(250px, auto));}
+  .portfolio-content {grid-template-columns: repeat(auto-fit, minmax(250px, auto)); gap: 24px;}
+  .portfolio-content .row {width: 250px; height: 250px;}
   .header {padding: 8px 10%;}
   .about-img img {width: 80%;}
   .contact.reveal {margin-top:0px; padding-top: 100px;}

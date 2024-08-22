@@ -78,13 +78,14 @@ body {color: #ededed; background-color: #081b29;}
 .portfolio {position:relative; top:150px; padding-top:100px;}
 .main-text h2 {font-size: 60px; line-height: 1; text-align: center; margin-bottom: 32px;}
 .main-text h2 span {color: #0ef;}
-.portfolio-content {display: grid; gap: 32px; padding: 0px 32px; grid-template-columns: repeat(auto-fit, minmax(350px, auto));}
-.portfolio-content .row {position:relative; overflow: hidden; border-radius: 8px; cursor: pointer;}
-.portfolio-content .row img {width: 100%; border-radius: 8px; display: block; transition:transform 0.5s;}
-.portfolio-content .layer {width: 100%; height: 0; background: linear-gradient(rgba(0,0,0,0.1),#0ef); position: absolute; border-radius: 8px; left: 0; bottom: 0; overflow: hidden; display: flex; flex-direction: column; align-items: center; padding: 0 40px; transition: height 0.5s;}
+.portfolio-content {display: grid; gap: 0px; padding: 0px 30px; grid-template-columns: repeat(auto-fit, minmax(350px, auto));}
+.portfolio-content .row {position:relative; width: 350px; height:300px; overflow: hidden; border-radius: 8px; cursor: pointer;}
+.portfolio-content .row img {height: 100%; border-radius: 8px; display: block; transition:transform 0.5s;}
+.portfolio-content .layer {width: 100%; height: 0; background: linear-gradient(rgba(0,0,0,0.2),#0ef); position: absolute; border-radius: 8px; left: 0; bottom: 0; overflow: hidden; display: flex; justify-content: center; flex-direction: column; align-items: center; padding: 0 40px; transition: height 0.5s;}
 .portfolio-content .layer h5 {color:#000; font-size: 20px; font-weight: 600; margin-bottom: 15px;}
 .portfolio-content .layer p {color: #000; font-size: 1rem; line-height: 1.8;}
 .portfolio-content .layer i {color: #ff004f; margin-top: 20px;  font-size: 20px; background: #fff; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; border-radius: 50%;}
+.portfolio-content .layer a {color: aliceblue;text-decoration: none;padding: 6px 12px;background: #f00;box-shadow: 1px 2px 6px #ac2525;border-radius: 4px;font-size: 14px; margin-top: 15px;}
 .portfolio-content .row:hover img {transform:scale(1.1);}
 .portfolio-content .row:hover .layer {height: 100%;}
 .contact {display: grid; grid-template-columns: repeat(2, 1fr); align-items: center; gap: 3rem; padding:0px 32px; margin-top:230px;}

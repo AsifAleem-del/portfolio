@@ -145,8 +145,9 @@ body#themeColorMode.active .last-text p {color: #fff;}
 .reveal.active {transform: translateY(0px); opacity:1; background:none;}
 .whatsAppChat {position: fixed; right: 16px; bottom:20px;}
 .whatsAppChat a i{font-size:50px; color:#09e200;}
-body#themeColorMode.active .blinking {width: 100%; height: 100vh; position: fixed; top:0px; left: 0px; background-color: #fff; z-index:99; animation: blining 0.4s linear forwards;}
-body .blinking.active {width: 100%; height: 100vh; position: fixed; top:0px; left: 0px; background-color: #fff; z-index:99; animation: blining1 0.4s linear forwards;}
+body .blinking {display: none;}
+body#themeColorMode.active .blinking {width: 100%; display: block; height: 100vh; position: fixed; top:0px; left: 0px; background-color: #fff; z-index:99; animation: blining 0.4s linear forwards;}
+body .blinking.active {width: 100%; height: 100vh; display: block; position: fixed; top:0px; left: 0px; background-color: #fff; z-index:99; animation: blining1 0.4s linear forwards;}
 
 @keyframes blining {
 20% {background-color: #fff; display: block;}

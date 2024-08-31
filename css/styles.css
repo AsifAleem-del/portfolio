@@ -238,6 +238,6 @@ body .blinking.active {width: 100%; height: 100vh; position: fixed; top:0px; lef
   .header {padding: 8px 10%;}
   .about-img img {width: 80%;}
   .contact.reveal {margin-top:0px; padding-top: 100px;}
-  .header button.themeColorBtn {top:21px; right:19px; padding: 2px 5px; font-size: 16px;}
+  .header button.themeColorBtn {top:21px; right:8px; padding: 2px 5px; font-size: 16px;}
   span.iconToggle.active + nav + button.themeColorBtn {display: none;}
 }

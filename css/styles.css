@@ -139,11 +139,11 @@ body#themeColorMode.active .contact-form form .send:hover {box-shadow: 0 0 5px #
 body#themeColorMode.active .last-text p {color: #fff;}
 .top {position: fixed; bottom: 2.1rem; right: 2.1rem;}
 .top i {color: #000; background: #0ef; font-size: 20px; padding: 10px; border-radius: 0.5rem;}
-#myBtn {display:none; position:fixed; bottom:76px; right:29px; z-index:99; font-size:24px; font-weight: 600; border:solid 2px red; outline:none; background-color:transparent; color:red; cursor:pointer; padding:8px 12px; border-radius:4px;}
+#myBtn {display:none; position:fixed; bottom:76px; right:15px; z-index:99; font-size:24px; font-weight: 600; border:solid 2px red; outline:none; background-color:transparent; color:red; cursor:pointer; padding:8px 12px; border-radius:4px;}
 .iconToggle {display: none;}
 .reveal {position:relative; transform: translateY(150px); opacity: 0; transition: all 1s ease;}
 .reveal.active {transform: translateY(0px); opacity:1; background:none;}
-.whatsAppChat {position: fixed; right: 30px; bottom:20px;}
+.whatsAppChat {position: fixed; right: 16px; bottom:20px;}
 .whatsAppChat a i{font-size:50px; color:#09e200;}
 body#themeColorMode.active .blinking {width: 100%; height: 100vh; position: fixed; top:0px; left: 0px; background-color: #fff; z-index:99; animation: blining 0.4s linear forwards;}
 body .blinking.active {width: 100%; height: 100vh; position: fixed; top:0px; left: 0px; background-color: #fff; z-index:99; animation: blining1 0.4s linear forwards;}
@@ -235,9 +235,9 @@ body .blinking.active {width: 100%; height: 100vh; position: fixed; top:0px; lef
   .portfolio .reveal {top: 0px; padding-top:100px;}
   .portfolio-content {grid-template-columns: repeat(auto-fit, minmax(250px, auto)); gap: 24px;}
   .portfolio-content .row {width:100%; height: 250px;}
-  .header {padding: 8px 10%;}
+  .header {padding: 8px 16px;}
   .about-img img {width: 80%;}
   .contact.reveal {margin-top:0px; padding-top: 100px;}
-  .header button.themeColorBtn {right:8px; padding: 2px 5px; font-size: 16px;}
+  .header button.themeColorBtn {right:50px; padding: 2px 5px; font-size: 16px;}
   span.iconToggle.active + nav + button.themeColorBtn {display: none;}
 }

@@ -139,12 +139,12 @@ body#themeColorMode.active .contact-form form .send:hover {box-shadow: 0 0 5px #
 body#themeColorMode.active .last-text p {color: #fff;}
 .top {position: fixed; bottom: 2.1rem; right: 2.1rem;}
 .top i {color: #000; background: #0ef; font-size: 20px; padding: 10px; border-radius: 0.5rem;}
-#myBtn {display:none; position:fixed; bottom:20px; right:30px; z-index:99; font-size:24px; font-weight: 600; border:none; outline:none; background-color:red; color:white; cursor:pointer; padding:8px 12px; border-radius:4px;}
-#myBtn:hover {background-color: #555;}
+#myBtn {display:none; position:fixed; bottom:76px; right:29px; z-index:99; font-size:24px; font-weight: 600; border:solid 2px red; outline:none; background-color:transparent; color:red; cursor:pointer; padding:8px 12px; border-radius:4px;}
 .iconToggle {display: none;}
 .reveal {position:relative; transform: translateY(150px); opacity: 0; transition: all 1s ease;}
 .reveal.active {transform: translateY(0px); opacity:1; background:none;}
-.whatsAppChat {position: fixed; right: 30px; bottom: 70px;}
+.whatsAppChat {position: fixed; right: 30px; bottom:20px;}
+.whatsAppChat a i{font-size:50px; color:#09e200;}
 body#themeColorMode.active .blinking {width: 100%; height: 100vh; position: fixed; top:0px; left: 0px; background-color: #fff; z-index:99; animation: blining 0.4s linear forwards;}
 body .blinking.active {width: 100%; height: 100vh; position: fixed; top:0px; left: 0px; background-color: #fff; z-index:99; animation: blining1 0.4s linear forwards;}
 
@@ -220,12 +220,12 @@ body .blinking.active {width: 100%; height: 100vh; position: fixed; top:0px; lef
     .services .container {padding:90px 32px 16px 32px;}
     .main-text {padding-top:0px; margin-top: 0px;}
     .main-text h2 {font-size: 42px; margin-bottom: 24px;}
-    .iconToggle {display:inline; float:right; color: #fff; margin-top:8px; cursor: pointer;}
-  .iconToggle .material-symbols-outlined {font-size: 32px; color: #fff;}
-  .iconToggle .material-symbols-outlined.menuIcon {display:inline-block;}
-  .iconToggle .material-symbols-outlined.CloseIcon {display:none;}
-  .iconToggle.active .material-symbols-outlined.menuIcon {display:none;}
-  .iconToggle.active .material-symbols-outlined.CloseIcon {display:inline-block;}
+    .iconToggle {display:inline; float:right; color: #fff; margin-top:4px; cursor: pointer;}
+  .iconToggle i {font-size:24px; color: #fff;}
+  .iconToggle i.menuIcon {display:inline-block;}
+  .iconToggle i.CloseIcon {display:none;}
+  .iconToggle.active i.menuIcon {display:none;}
+  .iconToggle.active i.CloseIcon {display:inline-block;}
   .iconToggle.active + ul {display: block; margin-bottom:10px;}
   .navbar {display: none;}
   .iconToggle.active + .navbar {display: block; position: fixed; top:60px; height: calc(100vh - 60px); left:0px; width:100%; background:rgba(0, 0, 0, 1);}
@@ -238,6 +238,6 @@ body .blinking.active {width: 100%; height: 100vh; position: fixed; top:0px; lef
   .header {padding: 8px 10%;}
   .about-img img {width: 80%;}
   .contact.reveal {margin-top:0px; padding-top: 100px;}
-  .header button.themeColorBtn {top:21px; right:8px; padding: 2px 5px; font-size: 16px;}
+  .header button.themeColorBtn {right:8px; padding: 2px 5px; font-size: 16px;}
   span.iconToggle.active + nav + button.themeColorBtn {display: none;}
 }

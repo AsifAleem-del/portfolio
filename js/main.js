@@ -80,3 +80,14 @@ loginForm.addEventListener("submit", (e) => {
     name.value = "";
   }
 });
+
+
+
+
+// Toggle button click
+function toggleThemeColor() {
+  var element = document.getElementById("themeColorMode");
+  var element1 = document.getElementById("blinkColorMode");
+  element.classList.toggle("active");
+  element1.classList.toggle("active");
+}

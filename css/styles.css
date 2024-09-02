@@ -19,7 +19,7 @@ body#themeColorMode.active .header button.themeColorBtn {background-color: #fff;
 .home-content h3 span {color:#0ef;}
 body#themeColorMode.active .home-content h3 span {color:#0064ff;}
 .home-content h1 {font-size: 56px; font-weight: 700; margin: 8px 0; opacity: 0; animation: slideRight 1s ease forwards; animation-delay: 1s;}
-.home-content p {font-size: 20px; opacity: 0; margin-top: 8px; animation: slideLeft 1s ease forwards;}
+.home-content p {font-size: 20px; line-height: 30px; opacity: 0; margin-top: 8px; animation: slideLeft 1s ease forwards;}
 .home-sci a {display: inline-flex; justify-content: center; align-items: center; width: 40px; height:40px; background:transparent; border:solid 2px #0ef; border-radius: 50%; font-size: 20px; color: #0ef; text-decoration: none; margin: 30px 15px 30px 0px; transition: .5s ease; opacity: 0; animation: slideBottom 1s ease forwards; animation-delay:calc(.2s * var(--i));}
 body#themeColorMode.active .home-sci a {border:solid 2px #0064ff; color: #0064ff;}
 .home-sci a:hover {background: #0ef; color: #081b29; box-shadow: 0 0 20px #0ef;}
@@ -32,7 +32,7 @@ body#themeColorMode.active .btn-box:hover {box-shadow: 0 0 5px #0064ff, 0 0 25px
 .about {display: grid; grid-template-columns: repeat(2, 1fr); align-items: center; gap: 1.5rem; padding: 32px; padding-top: 90px; transition: 0.5s;}
 body#themeColorMode.active .about {background-color:#ececec;}
 .about-img {display: flex; justify-content: center;}
-.about-img img {padding-bottom:10%; max-width:400px; height: auto; width: 100%; border-radius: 8px;}
+.about-img img {max-width:400px; height: auto; width: 100%; background-color: #fff; border-radius:120px 20px 120px 20px;}
 .about-text h2 {font-size: 60px;}
 .about-text h2 span {color:#0ef}
 body#themeColorMode.active .about-text h2 span {color:#0064ff}
@@ -50,7 +50,7 @@ body#themeColorMode.active .sub-title span {color: #0064ff;}
 .services .services-list {display: grid; grid-template-columns: repeat(auto-fit,minmax(259px,1fr)); grid-gap: 40px; margin-top:50px;}
 .services .services-list div {background-color: #333; padding: 40px; font-size: 13px; border-right: 10px; border-radius: 20px; text-align: center; transition: 0.5s; box-shadow: 1px 1px 20px #012290f7, 1px 1px 40px #0053b8f7}
 body#themeColorMode.active .services .services-list div {background-color: #828282; box-shadow: unset;}
-.services .services-list div span {font-size: 50px; margin-bottom: 30px;}
+.services .services-list div span i {font-size: 50px; margin-bottom: 30px;}
 .services .services-list div h2 {font-size: 30px; font-weight: 500; margin-bottom: 15px;}
 .services .services-list div a {text-decoration: none; color:#000; font-size: 12px; margin-top:20px; display: inline-block;}
 .services .services-list div a {text-decoration: none; color:#000; font-size: 12px; margin-top:20px; display: inline-block;}
@@ -83,6 +83,8 @@ body#themeColorMode.active .services .services-list div a.read:hover {box-shadow
 .technical-bars .bar .progress-line.JQuery span::after {content:'90%'}
 .technical-bars .bar .progress-line.react span {width: 60%;}
 .technical-bars .bar .progress-line.react span::after {content:'60%'}
+.technical-bars .bar .progress-line.seo span {width: 70%;}
+.technical-bars .bar .progress-line.seo span::after {content:'70%'}
 .technical-bars .bar .progress-line::after {position:absolute; padding: 1px 8px; background-color: #000; color: #fff; font-size: 12px; border-radius: 3px; top:-28px; right: -20px; animation:showText 0.5s 1.5s linear forwards; opacity: 0;}
 .technical-bars .bar .progress-line span::before {content: ""; position:absolute; width: 0; height: 0; border: 7px solid transparent; border-bottom-width: 0px; border-right-width: 0px; border-top-color: #000; top: -10px; right: 0; animation: shottext 0.5s 1.5s linear forwards; opacity: 0;}
 .technical-bars .bar .progress-line span::after { position:absolute; top:-26px; right: -20px; font-size: 12px; background-color: #000; border-radius: 8px; padding:4px 8px}
@@ -113,6 +115,9 @@ body#themeColorMode.active .main-text h2 span {color: #0064ff;}
 .portfolio-content .layer a {color: aliceblue;text-decoration: none;padding: 6px 12px;background: #f00;box-shadow: 1px 2px 6px #ac2525;border-radius: 4px;font-size: 14px; margin-top: 15px;}
 .portfolio-content .row:hover img {transform:scale(1.1);}
 .portfolio-content .row:hover .layer {height: 100%;}
+.company-logo {display: flex; justify-content: center; position: relative; top:200px; padding: 100px 0px;}
+.company-logo .companies-logo {background-color: #fff; padding: 32px; border-radius: 24px; display:flex; justify-content:center; align-items:center; gap:20px;}
+body#themeColorMode.active .company-logo .companies-logo {border:solid 1px #ccc;}
 .contact {display: grid; grid-template-columns: repeat(2, 1fr); align-items: center; gap: 3rem; padding:60px 32px; margin-top:230px;}
 body#themeColorMode.active .contact { background-color:#ececec;}
 .contact-text h2 {font-size:60px; line-height: 1; text-align: center; margin:0px 0px 50px 0px;}
@@ -236,6 +241,8 @@ body .blinking.active {width: 100%; height: 100vh; display: block; position: fix
   .portfolio .reveal {top: 0px; padding-top:100px;}
   .portfolio-content {grid-template-columns: repeat(auto-fit, minmax(250px, auto)); gap: 24px;}
   .portfolio-content .row {width:100%; height: 250px;}
+  .company-logo {margin-bottom: 100px;}
+  .company-logo .companies-logo {flex-direction: column;}
   .header {padding: 8px 16px;}
   .about-img img {width: 80%;}
   .contact.reveal {margin-top:0px; padding-top: 100px;}

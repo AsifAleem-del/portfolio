@@ -17,26 +17,27 @@ body#themeColorMode.active .header button.themeColorBtn {background-color: #fff;
 .home .profile-pic img {width: 50%;}
 .home-content {max-width: 600px;}
 .home-content h3 {font-size: 32px; font-weight: 700; opacity: 0; animation: slideBottom 1s ease forwards; animation-delay: .7s;}
+body#themeColorMode.active .home-content h3 {color: #8b8b8b;}
 .home-content h3 span {color:#0ef;}
-body#themeColorMode.active .home-content h3 span {color:#0064ff;}
+body#themeColorMode.active .home-content h3 span {color:#0585e5;}
 .home-content h1 {font-size: 56px; font-weight: 700; margin: 8px 0; opacity: 0; animation: slideRight 1s ease forwards; animation-delay: 1s;}
 .home-content p {font-size: 20px; line-height: 30px; opacity: 0; margin-top: 8px; animation: slideLeft 1s ease forwards;}
 .home-sci a {display: inline-flex; justify-content: center; align-items: center; width: 40px; height:40px; background:transparent; border:solid 2px #0ef; border-radius: 50%; font-size: 20px; color: #0ef; text-decoration: none; margin: 30px 15px 30px 0px; transition: .5s ease; opacity: 0; animation: slideBottom 1s ease forwards; animation-delay:calc(.2s * var(--i));}
-body#themeColorMode.active .home-sci a {border:solid 2px #0064ff; color: #0064ff;}
+body#themeColorMode.active .home-sci a {border:solid 2px #0585e5; color: #0585e5;}
 .home-sci a:hover {background: #0ef; color: #081b29; box-shadow: 0 0 20px #0ef;}
-body#themeColorMode.active .home-sci a:hover {background:#0064ff; box-shadow: 0 0 20px #0064ff; color: #fff;}
+body#themeColorMode.active .home-sci a:hover {background:#0585e5; box-shadow:none; color: #fff;}
 body#themeColorMode.active .home {background-color: #fff;}
 .btn-box {display: inline-block; padding: 12px 28px; background:#000; border-radius: 40px; border: 1px solid #0ef; font-size: 16px; color: #0ef; letter-spacing: 1px; text-decoration: none; font-weight: 600; opacity: 0; animation: slideTop 1s ease forwards; animation-delay: 2s; box-shadow: 0 0 5px #0ef, 0 0 25px #0ef}
 .btn-box:hover {box-shadow: 0 0 5px cyan, 0 0 25px cyan, 0 0 100px cyan, 0 0 200px cyan; background: #0ef; color: #000;}
-body#themeColorMode.active .btn-box {background:#fff; border: 1px solid #0064ff; color: #0064ff; box-shadow: 0 0 5px #0064ff, 0 0 25px #0064ff}
-body#themeColorMode.active .btn-box:hover {box-shadow: 0 0 5px #0064ff, 0 0 25px #0064ff 0 0 100px #0064ff, 0 0 200px #0064ff; background: #0064ff; color: #fff;}
+body#themeColorMode.active .btn-box {background:#fff; border: 1px solid #0585e5; color: #0585e5; box-shadow: none;}
+body#themeColorMode.active .btn-box:hover {box-shadow: 0 0 5px #0585e5, 0 0 25px #0585e5 0 0 100px #0585e5, 0 0 200px #0585e5; background: #0585e5; color: #fff;}
 .about {display: grid; grid-template-columns: repeat(2, 1fr); align-items: center; gap: 1.5rem; padding: 32px; padding-top: 90px; transition: 0.5s;}
 body#themeColorMode.active .about {background-color:#ececec;}
 .about-img {display: flex; justify-content: center;}
 .about-img img {max-width:400px; height: auto; width: 100%;}
 .about-text h2 {font-size: 60px;}
 .about-text h2 span {color:#0ef}
-body#themeColorMode.active .about-text h2 span {color:#0064ff}
+body#themeColorMode.active .about-text h2 span {color:#0585e5}
 .about-text h4 {font-size: 29px; font-weight: 600; color: #fff; line-height: 1.7; margin: 15px 0 30px;}
 .about-text p {color: aliceblue; font-size: 20px; line-height: 1.4; margin-bottom: 4rem;}
 body#themeColorMode.active .about-text h4 {color: #000;}
@@ -44,7 +45,7 @@ body#themeColorMode.active .about-text p {color: #000;}
 .services {color: aliceblue; font-size: 20px; line-height:1.4; margin-bottom:0; background:linear-gradient(to top, #30cfd0 0%, #330867 100%);}
 body#themeColorMode.active .services {color: #fff; background: #fff;}
 body#themeColorMode.active .services .sub-title {color: #000;}
-body#themeColorMode.active .sub-title span {color: #0064ff;}
+body#themeColorMode.active .sub-title span {color: #0585e5;}
 .services .sub-title {text-align: center; font-size: 60px; padding:0px;}
 .services .sub-title span {color: #0ef;}
 .services .container {padding: 90px;}
@@ -57,8 +58,8 @@ body#themeColorMode.active .services .services-list div {background-color: #8282
 .services .services-list div a {text-decoration: none; color:#000; font-size: 12px; margin-top:20px; display: inline-block;}
 .services .services-list div a.read {display: inline-block; padding: 12px; background: #081b29; border-radius: 40px; font-size: 16px; color: #0ef; letter-spacing: 1px; text-decoration: none; font-weight: 600; opacity: 0; animation: slideTop 1s ease forwards; animation-delay: 2s; box-shadow: 0 0 5px #0ef, 0 0 25px #0ef;} 
 .services .services-list div a.read:hover {box-shadow: 0 0 5px cyan, 0 0 25px cyan, 0 0 50px cyan, 0 0 100px cyan, 0 0  200px cyan;}
-body#themeColorMode.active .services .services-list div a.read {background: #fff; color: #0064ff; box-shadow: 0 0 5px #0064ff, 0 0 25px #0064ff;} 
-body#themeColorMode.active .services .services-list div a.read:hover {box-shadow: 0 0 5px #0064ff, 0 0 25px #0064ff, 0 0 50px #0064ff, 0 0 100px #0064ff, 0 0  200px #0064ff;}
+body#themeColorMode.active .services .services-list div a.read {background: #fff; color: #0585e5; box-shadow: 0 0 5px #0585e5, 0 0 25px #0585e5;} 
+body#themeColorMode.active .services .services-list div a.read:hover {box-shadow: 0 0 5px #0585e5, 0 0 25px #0585e5, 0 0 50px #0585e5, 0 0 100px #0585e5, 0 0  200px #0585e5;}
 .services .services-list div:hover {transform: translateY(-10px); animation:1s ease forwards;}
 .skill {padding:60px 0px 40px 0px;}
 .skill .skillContainer {display: flex; justify-content: center;}
@@ -74,6 +75,7 @@ body#themeColorMode.active .services .services-list div a.read:hover {box-shadow
 .skill .container .technical-bars .bar .progress-line {position: relative; border-radius:10px; width:100%; height:5px; background-color: #000; animation:animate 1s cubic-bezier(1, 0, 0, 1) forwards; transform: scaleX(0); transform-origin: left;}
 
 .skill .container .technical-bars .bar .progress-line span {height:100%; background-color: #0ef; position:absolute; border-radius: 10px; animation:animate 1s cubic-bezier(1, 0, 0, 1) forwards; transform: scaleX(0); transform-origin: left;}
+body#themeColorMode.active .skill .container .technical-bars .bar .progress-line span {background-color: #0585e5;}
 .skill .container .technical-bars .bar .progress-line.html span {width: 95%;}
 .skill .container .technical-bars .bar .progress-line.html span::after {content:'95%'}
 .skill .container .technical-bars .bar .progress-line.css span {width: 95%;}
@@ -98,6 +100,7 @@ body#themeColorMode.active .technical-bars .bar .progress-line span::after {back
 .radial-bars .percentage {position:absolute; top:50%; left: 50%; transform: translate(-50%, -50%); font-size: 17px; font-weight: 500; animation: showText 0.5s 1s linear forwards; opacity: 0;}
 .radial-bars .text {width:100%; position: absolute; text-align: center; left: 50%; bottom: -5px; transform: translateX(-50%); font-size: 17px; font-weight: 500; animation: showText 0.5s 1s linear forwards; opacity: 0;}
 .path {stroke-width: 10; stroke:#0ef; fill: transparent; stroke-dasharray: 502; stroke-dashoffset: 502; stroke-linecap: round;}
+body#themeColorMode.active .path {stroke:#0585e5; }
 .path-1 {animation: animate-path1 1s 1s linear forwards;}
 .path-2 {animation: animate-path2 1s 1s linear forwards;}
 .path-3 {animation: animate-path3 1s 1s linear forwards;}
@@ -105,7 +108,7 @@ body#themeColorMode.active .technical-bars .bar .progress-line span::after {back
 .portfolio {position:relative; top:150px; padding-top:100px;}
 .main-text h2 {font-size: 60px; line-height: 1; text-align: center; margin-bottom: 32px;}
 .main-text h2 span {color: #0ef;}
-body#themeColorMode.active .main-text h2 span {color: #0064ff;}
+body#themeColorMode.active .main-text h2 span {color: #0585e5;}
 .portfolio-content {display: grid; gap: 0px; padding: 0px 30px; grid-template-columns: repeat(auto-fit, minmax(350px, auto));}
 .portfolio-content .row {position:relative; width: 350px; height:300px; overflow: hidden; border-radius: 8px; cursor: pointer;}
 .portfolio-content .row img {height: 100%; border-radius: 8px; display: block; transition:transform 0.5s;}
@@ -123,7 +126,7 @@ body#themeColorMode.active .company-logo .companies-logo {border:solid 1px #ccc;
 body#themeColorMode.active .contact { background-color:#ececec;}
 .contact-text h2 {font-size:60px; line-height: 1; text-align: center; margin:0px 0px 50px 0px;}
 .contact-text h2 span {color: #0ef;}
-body#themeColorMode.active .contact-text h2 span {color: #0064ff;}
+body#themeColorMode.active .contact-text h2 span {color: #0585e5;}
 .contact-text h4 {margin: 15px 0; color:rgb(228,228,228); font-size: 20px; font-weight: 600;}
 body#themeColorMode.active .contact-text h4 {color: #000;}
 .contact-text p {color: rgb(177, 177, 177); font-size: 20px; line-height: 30px; margin-bottom: 2rem;}
@@ -139,13 +142,14 @@ body#themeColorMode.active .contact-text p {color: rgb(69 69 69);}
 .contact-form textarea {resize: none; height: 220px;}
 .contact-form form .send {display: inline-block; padding: 14px 60px; background: #081b29; border-radius: 40px; font-size: 18px; color: #0ef; letter-spacing: 1px; text-decoration: none; font-weight: 600; margin-top:8px; opacity: 0; animation: slideTop 1s ease forwards; animation-delay: 2s; box-shadow: 0 0 5px #0ef, 0 0 25px #0ef; border: none;}
 .contact-form form .send:hover {box-shadow: 0 0 5px cyan, 0 0 25px cyan, 0 0 50px cyan, 0 0 100px cyan, 0 0 200px cyan; cursor: pointer;}
-body#themeColorMode.active .contact-form form .send {background: #fff; border-color:#0064ff; color: #0064ff; box-shadow: 0 0 5px #0064ff, 0 0 25px #0064ff}
-body#themeColorMode.active .contact-form form .send:hover {box-shadow: 0 0 5px #0064ff, 0 0 25px #0064ff, 0 0 50px #0064ff, 0 0 100px #0064ff, 0 0 200px #0064ff;}
+body#themeColorMode.active .contact-form form .send {background: #fff; border:solid 2px #0585e5; color: #0585e5; box-shadow:none;}
+body#themeColorMode.active .contact-form form .send:hover {box-shadow: none; background-color:#0585e5; color: #fff;}
 .last-text p {width: 100%; text-align: center; padding: 25px 0px; background: rgb(7, 85, 91); font-weight: 300;}
 body#themeColorMode.active .last-text p {color: #fff;}
 .top {position: fixed; bottom: 2.1rem; right: 2.1rem;}
 .top i {color: #000; background: #0ef; font-size: 20px; padding: 10px; border-radius: 0.5rem;}
-#myBtn {display:none; position:fixed; bottom:76px; right:15px; z-index:99; font-size:24px; font-weight: 600; border:solid 2px red; outline:none; background-color:transparent; color:red; cursor:pointer; padding:8px 12px; border-radius:4px;}
+#myBtn {display:none; position:fixed; bottom:76px; right:18px; z-index:99; font-size:18px; font-weight: 600; border:solid 2px#0ef; outline:none; background-color:transparent; color:#0ef; cursor:pointer; padding:8px 12px; border-radius:4px;}
+body#themeColorMode.active #myBtn {border:solid 2px #0585e5; color:#0585e5;}
 .iconToggle {display: none;}
 .reveal {position:relative; transform: translateY(150px); opacity: 0; transition: all 1s ease;}
 .reveal.active {transform: translateY(0px); opacity:1; background:none;}
@@ -156,6 +160,7 @@ body#themeColorMode.active .blinking {width: 100%; display: block; height: 100vh
 body .blinking.active {width: 100%; height: 100vh; display: block; position: fixed; top:0px; left: 0px; background-color: #fff; z-index:99; animation: blining1 0.4s linear forwards;}
 .p-relative {position:relative;}
 .animatedBox div {position: absolute; width: 60px; height: 60px; border-radius:50%; background-color: transparent; border: solid 1px rgba(255, 255, 255, 0.8);}
+body#themeColorMode.active .animatedBox div { border: solid 1px rgba(0, 0, 0, 0.8);}
 .animatedBox div:nth-child(1){top: 12%; left: 42%; animation: animatedBox 10s linear infinite;}
 .animatedBox div:nth-child(2){top: 70%; left: 50%; animation: animatedBox 7s linear infinite;}
 .animatedBox div:nth-child(3){top: 17%; left: 6%; animation: animatedBox 9s linear infinite;}

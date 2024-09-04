@@ -31,6 +31,7 @@ body#themeColorMode.active .home {background-color: #fff;}
 .btn-box:hover {box-shadow: 0 0 5px cyan, 0 0 25px cyan, 0 0 100px cyan, 0 0 200px cyan; background: #0ef; color: #000;}
 body#themeColorMode.active .btn-box {background:#fff; border: 1px solid #0585e5; color: #0585e5; box-shadow: none;}
 body#themeColorMode.active .btn-box:hover {box-shadow: 0 0 5px #0585e5, 0 0 25px #0585e5 0 0 100px #0585e5, 0 0 200px #0585e5; background: #0585e5; color: #fff;}
+body#themeColorMode.active #about .animatedBox div {z-index: 9;}
 .about {display: grid; grid-template-columns: repeat(2, 1fr); align-items: center; gap: 1.5rem; padding: 32px; padding-top: 90px; transition: 0.5s;}
 body#themeColorMode.active .about {background-color:#ececec;}
 .about-img {display: flex; justify-content: center;}

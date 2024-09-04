@@ -130,6 +130,7 @@ body#themeColorMode.active .contact-text h2 span {color: #0585e5;}
 .contact-text h4 {margin: 15px 0; color:rgb(228,228,228); font-size: 20px; font-weight: 600;}
 body#themeColorMode.active .contact-text h4 {color: #000;}
 .contact-text p {color: rgb(177, 177, 177); font-size: 20px; line-height: 30px; margin-bottom: 2rem;}
+.contact-text h5 {max-width: 70%; margin:0 auto;}
 body#themeColorMode.active .contact-text p {color: rgb(69 69 69);}
 .contact-list {margin-bottom:3rem}
 .contact-list i {margin-bottom: 10px; display: block;}

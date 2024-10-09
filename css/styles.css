@@ -35,7 +35,7 @@ body#themeColorMode.active #about .animatedBox div {z-index: 9;}
 .about {display: grid; grid-template-columns: repeat(2, 1fr); align-items: center; gap: 1.5rem; padding: 32px; padding-top: 90px; transition: 0.5s;}
 body#themeColorMode.active .about {background-color:#ececec;}
 .about-img {display: flex; justify-content: center;}
-.about-img img {max-width:400px; height: auto; width: 100%;}
+.about-img img {max-width:80%; height: auto; width: 100%;}
 .about-text h2 {font-size: 60px;}
 .about-text h2 span {color:#0ef}
 body#themeColorMode.active .about-text h2 span {color:#0585e5}
@@ -273,7 +273,6 @@ body .blinking.active {width: 100%; height: 100vh; display: block; position: fix
   .company-logo {margin-bottom: 100px; top:130px; padding:0px 0px 30px 0px;}
   .company-logo .companies-logo {flex-direction: column;}
   .header {padding: 8px 16px;}
-  .about-img img {width: 80%;}
   .contact.reveal {margin-top:0px; padding-top: 100px;}
   .contact .contact-form form {display: flex; justify-content: center; flex-direction: column;}
   .header button.themeColorBtn {right:50px; padding: 2px 5px; font-size: 16px;}

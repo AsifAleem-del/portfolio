@@ -20,8 +20,8 @@ header nav ul li a.quickContact {border:solid 1px #fff;}
 header nav ul li a:hover {background-color: #fff; color: #333;}
 header nav div.m-navigatior {display: none;}
 header nav .contact-text {padding:8px 16px; color:#fff; display: block;}
-header nav .contact-text span {display:block; margin-top:4px; white-space:nowrap;}
-header nav .contact-text span i {font-size:16px; margin-right:4px;}
+header nav .contact-text span {display:block; margin-top:4px; white-space:nowrap; color: #fff;}
+header nav .contact-text span i {font-size:16px; margin-right:4px; color: #fff;}
 .home-section {width:100%; max-width: 1840px; height:100vh; margin:0 auto; background-color:#ecf2f9; position: relative; display: flex; padding:50px; padding-top: 120px; justify-content: space-between; align-items: center; overflow: hidden;}
 .home-section .icon-container {font-size:280px; color:#000;  position:fixed; top:50%; left:50%; transform: translate(-50%, -50%); scale: 1; animation: flikerImage 6s infinite alternate;}
 .home-section .icon-container i {opacity:1;}
@@ -232,9 +232,9 @@ input[type="datetime-local"]:hover::-webkit-calendar-picker-indicator {opacity: 
   .footer-sticky {position: fixed; bottom: 0px; left: 0px; background-color: #ff5e00; width: 100%; height:56px; color: #fff; z-index: 9; display: flex; justify-content: center;}
   .footer-sticky .nav {width: 100%;}
   .footer-sticky .nav .m-social-contact-icon {position: absolute; width: 100%; display: flex; justify-content: center; height: 100%;}
-  .footer-sticky .nav .m-social-contact-icon a {display: inline-block; text-align: center; width: auto; text-decoration: none; font-size:14px; padding:5px 10px 0px 10px; color: #fff;}
-  .footer-sticky .nav .m-social-contact-icon a i {border:solid 2px #fff; padding:6px; border-radius:50%; position:relative; top:3px;}
-  .footer-sticky .nav .m-social-contact-icon a i + span{ display: block; font-size: 9px;font-weight: bold; letter-spacing: 1px; margin-top:4px;}
+  .footer-sticky .nav .m-social-contact-icon a {display: inline-block; text-align: center; width: auto; text-decoration: none; font-size:20px; padding:4px 10px 0px 10px; color: #fff;}
+  .footer-sticky .nav .m-social-contact-icon a i {padding:6px; border-radius:50%; position:relative; top:3px;}
+  .footer-sticky .nav .m-social-contact-icon a i + span{ display: block; font-size:10px;font-weight: bold; letter-spacing: 1px; margin-top:1px;}
   .footer-sticky .nav .m-social-contact-icon:has(+ .m-navigatior.active) {display: none;}
   header nav ul li a {padding: 16px;}
   section.service .container .box-container .box a + .service-content-modal p {font-size: 11px;}

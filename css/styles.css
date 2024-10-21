@@ -39,7 +39,7 @@ body#themeColorMode.active .about {background-color:#ececec;}
 .about-text h2 {font-size: 60px;}
 .about-text h2 span {color:#0ef}
 body#themeColorMode.active .about-text h2 span {color:#0585e5}
-.about-text h4 {font-size: 29px; font-weight: 600; color: #fff; line-height: 1.7; margin: 15px 0 30px;}
+.about-text .hFourText {font-size: 29px; font-weight: 600; color: #fff; line-height: 1.7; margin: 15px 0 30px;}
 .about-text p {color: aliceblue; font-size: 20px; line-height: 1.4; margin-bottom: 4rem;}
 body#themeColorMode.active .about-text h4 {color: #000;}
 body#themeColorMode.active .about-text p {color: #000;}
@@ -131,7 +131,7 @@ body#themeColorMode.active .contact-text h2 span {color: #0585e5;}
 .contact-text h4 {margin: 15px 0; color:rgb(228,228,228); font-size: 20px; font-weight: 600;}
 body#themeColorMode.active .contact-text h4 {color: #000;}
 .contact-text p {color: rgb(177, 177, 177); font-size: 20px; line-height: 30px; margin-bottom: 2rem;}
-.contact-text h5 {max-width: 70%; margin:0 auto;}
+.contact-text p.subText {max-width: 70%; margin:0 auto; font-size:14px; font-weight: bold; line-height: 20px;}
 body#themeColorMode.active .contact-text p {color: rgb(69 69 69);}
 .contact-list {margin-bottom:3rem}
 .contact-list i {margin-bottom: 10px; display: block;}

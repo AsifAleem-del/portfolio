@@ -1,0 +1,64 @@
+html {scroll-behavior: smooth;}
+* {padding:0px; margin:0px; outline: 0px; font-family: Arial, Helvetica, sans-serif; letter-spacing: 1px;}
+header {width: 100%; display: flex; background-color:#4f64cf; justify-content:space-around; color: #fff;}
+header .logo {padding: 16px; cursor: pointer;}
+header nav ul li {color: #fff; list-style:none; display: inline-block; font-size: 14px;}
+header nav ul li a {padding:16px; display: inline-block; cursor: pointer; border-bottom: solid 4px transparent; transition: 0.5s;}
+header nav ul li a:hover { border-bottom: solid 4px #fff;}
+header .cart {padding:14px 16px; font-size:20px; position:relative;}
+header .cart::before {content: '10'; position:absolute; top:6px; right:6px; font-size: 10px; padding:4px; border-radius:50%; background-color: #000;}
+.banner {width: 100%; height:360px; display:flex; background-color: #fff; border-bottom: solid 1px #ccc; background-image: url(https://fakestoreapi.com/img/61pHAEJ4NML._AC_UX679_.jpg); background-repeat: no-repeat; background-size:unset; background-position: right;}
+.banner .text-section {width:25%; height: 100%; font-size:42px; line-height: 52px; text-align: center; position: relative; padding:0px 50px; background-color: rgba(0, 0, 0, 0.9); color: #fff; display: flex; justify-content: center; align-items: center;}
+.container {padding:50px 32px; display: flex; justify-content: center; flex-wrap: wrap; gap: 20px;}
+.container div {width:20%; padding: 24px; box-shadow:0px 4px 10px #ccc; text-align: center; border-radius: 16px; border: solid 1px #e9e9e9; overflow: hidden;}
+.banner .text-section::after {content: ''; height:4px; width:18%; position: absolute; bottom:90px; background-color: #fff;}
+.container div:hover img {transform: scale(1.05); cursor: pointer;}
+.container div img {width:auto; height:auto; transition:0.5s; max-height: 160px; text-align: center;}
+.container div h2 {text-align:left; font-size: 14px; font-weight: 600; margin-top: 12px; color: #787878;}
+.container div p {text-align:left; display: block; margin:8px 0px; font-size: 14px; line-height: normal;}
+.container div p::before {content: '$';}
+.container div span.icon-container {display:block; text-align:left; font-size:12px; color:#a1a1a1;}
+footer {width: 100%; display: flex; justify-content: space-between; border-top: solid 1px #ccc; padding: 16px 0px;}
+footer div {width: 25%; padding:24px;}
+footer div span {color: #787878; font-size: 14px; font-weight: 600; margin-bottom: 6px; display: block;}
+footer div ul {list-style: none;}
+footer div ul li{font-size: 13px; line-height: 20px; color: #888888; cursor: pointer;}
+footer div ul li a {font-size: 13px; line-height: 24px; color: #888888; cursor: pointer;}
+footer div ul li a:hover {color:#000000;}
+footer div ul li span {display: inline-block; font-size: 18px; padding:10px 4px; }
+footer div ul li span i {transition: 0.3s;}
+footer div ul li span i:hover {transform: scale(1.3);}
+.iconToggle {display: none;}
+
+
+@media(max-width:768px) {
+    header {position: sticky; top: 0; z-index: 999; justify-content: space-between;}
+    header nav {display: none;}
+    .container {padding:110px 16px 50px 16px; gap:10px;}
+    .container div {width:32%; padding:16px;}
+    .container div h2 {font-size: 12px; line-height: 16px;}
+    .container div p {font-size: 12px;}
+    .container div img {width: 100%; max-height: 130px;}
+    .banner {position: relative; height: 224px;}
+    .banner .text-section {width:80%; height:70%; font-size: 32px; line-height: 42px; padding: 0px; position: absolute; bottom:-70px; top: auto; left: 10%; }
+    .banner .text-section::after {width:32%; bottom:24px;}
+    footer {flex-direction: column;}
+    footer div {width: 80%;}
+    .iconToggle {display:inline; float:right; color: #fff; padding-top:13px; padding-left: 10px; cursor: pointer;}
+    .iconToggle i {font-size:24px; color: #fff;}
+    .iconToggle i.menuIcon {display:inline-block;}
+    .iconToggle i.CloseIcon {display:none;}
+    .iconToggle.active i.menuIcon {display:none;}
+    .iconToggle.active i.CloseIcon {display:inline-block;}
+    .iconToggle.active ~ nav {display: block; position: fixed; top:46px; height: calc(100vh - 40px); left:0px; width:100%; background:rgb(79 100 207); border-top:solid 1px #788eff;}
+    .iconToggle.active ~ nav ul li {width: 100%;}
+    header nav ul li a:hover,header nav ul li a:active,header nav ul li a:focus { border-bottom: solid 4px #4f64cf; background-color:transparent;}
+}
+
+@media(max-width:1024px) {
+    .container div img {width: 100%;}
+}
+
+@media(max-width:1280px) {
+    .container div img {width: 100%;}
+}

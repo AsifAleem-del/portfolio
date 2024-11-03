@@ -7,6 +7,7 @@ body#themeColorMode.active {color: #000; background-color: #fff;}
 .navbar a {display:inline-block; font-size:14px; color: #fff; text-decoration: none; font-weight: 500; border: solid 1px #051129; margin-left:12px; padding: 8px 16px; transition: .3s; opacity: 0; animation: slideTop .5s ease forwards; animation-delay: calc(.2s * var(--i));}
 .navbar a:hover {color: #0ef; border:solid 1px #0ef; border-radius: 4px; transition: 1s ease;}
 .header button.themeColorBtn {background: #00eeff; padding:5px 10px; border-radius: 4px; border: none; font-size: 20px; transition: 0.5s; position: absolute; top:13px; right:16px; cursor: pointer;}
+.header button.themeColorBtn .mode-text {font-size:12px; text-transform: uppercase; position: relative; top: -3px;}
 body#themeColorMode .header button span.light {display: none;}
 body#themeColorMode .header button span.dark {display: inline-block;}
 body#themeColorMode.active .header button span.light {display: inline-block;}
@@ -40,6 +41,7 @@ body#themeColorMode.active .about {background-color:#ececec;}
 .about-text h2 span {color:#0ef}
 body#themeColorMode.active .about-text h2 span {color:#0585e5}
 .about-text .hFourText {font-size: 29px; font-weight: 600; color: #fff; line-height: 1.7; margin: 15px 0 30px;}
+body#themeColorMode.active .about-text .hFourText {color: #333;}
 .about-text p {color: aliceblue; font-size: 20px; line-height: 1.4; margin-bottom: 4rem;}
 body#themeColorMode.active .about-text h4 {color: #000;}
 body#themeColorMode.active .about-text p {color: #000;}
@@ -81,14 +83,14 @@ body#themeColorMode.active .skill .container .technical-bars .bar .progress-line
 .skill .container .technical-bars .bar .progress-line.html span::after {content:'95%'}
 .skill .container .technical-bars .bar .progress-line.css span {width: 95%;}
 .technical-bars .bar .progress-line.css span::after {content:'95%'}
-.technical-bars .bar .progress-line.JavaScript span {width: 80%;}
-.technical-bars .bar .progress-line.JavaScript span::after {content:'80%'}
 .technical-bars .bar .progress-line.JQuery span {width: 90%;}
 .technical-bars .bar .progress-line.JQuery span::after {content:'90%'}
-.technical-bars .bar .progress-line.react span {width: 60%;}
-.technical-bars .bar .progress-line.react span::after {content:'60%'}
-.technical-bars .bar .progress-line.seo span {width: 70%;}
-.technical-bars .bar .progress-line.seo span::after {content:'70%'}
+.technical-bars .bar .progress-line.react span {width: 80%;}
+.technical-bars .bar .progress-line.react span::after {content:'80%'}
+.technical-bars .bar .progress-line.seo span {width: 95%;}
+.technical-bars .bar .progress-line.seo span::after {content:'95%'}
+.technical-bars .bar .progress-line.graphic span {width:90%;}
+.technical-bars .bar .progress-line.graphic span::after {content:'90%'}
 .technical-bars .bar .progress-line::after {position:absolute; padding: 1px 8px; background-color: #000; color: #fff; font-size: 12px; border-radius: 3px; top:-28px; right: -20px; animation:showText 0.5s 1.5s linear forwards; opacity: 0;}
 .technical-bars .bar .progress-line span::before {content: ""; position:absolute; width: 0; height: 0; border: 7px solid transparent; border-bottom-width: 0px; border-right-width: 0px; border-top-color: #000; top: -10px; right: 0; animation: shottext 0.5s 1.5s linear forwards; opacity: 0;}
 .technical-bars .bar .progress-line span::after { position:absolute; top:-26px; right: -20px; font-size: 12px; background-color: #000; border-radius: 8px; padding:4px 8px}
@@ -176,6 +178,7 @@ body .blinking.active {width: 100%; height: 100vh; display: block; position: fix
 .animatedBox div:nth-child(11){top: 15%; left: 20%; animation: animatedBox 17s linear infinite;}
 .animatedBox div:nth-child(12){top: 42%; left: 12%; animation: animatedBox 15s linear infinite;}
 .animatedBox div:nth-child(13){top: 70%; left: 60%; animation: animatedBox 22s linear infinite;}
+.m-view-social-icons {display: none;}
 
 @keyframes animatedBox {
     0% {transform: scale(0) translateY(0) rotate(0); opacity: 0.3;}
@@ -276,5 +279,14 @@ body .blinking.active {width: 100%; height: 100vh; display: block; position: fix
   .contact.reveal {margin-top:0px; padding-top: 100px;}
   .contact .contact-form form {display: flex; justify-content: center; flex-direction: column;}
   .header button.themeColorBtn {right:50px; padding: 2px 5px; font-size: 16px;}
+  .header button.themeColorBtn .mode-text {font-size: 10px; top:-2px;}
   span.iconToggle.active + nav + button.themeColorBtn {display: none;}
+  #themeColorMode.active .m-view-social-icons {background:#0091bf;}
+  #themeColorMode.active .m-view-social-icons a {color: #fff;}
+  .m-view-social-icons {display: flex; justify-content: center; position: fixed; bottom: 0px; left: 0px; width: 100%; background:#00eeff;}
+  .m-view-social-icons a {color: #000; font-size:20px; display: inline-block; padding:8px 16px; text-decoration: none; text-align: center;}
+  .m-view-social-icons a .icon-text {display:block; font-size:12px; padding-top:2px;}
+  .m-view-social-icons a i.fa-solid.fa-phone {font-size:17px;}
+  .whatsAppChat {display: none;}
+  body {padding-bottom: 54px;}
 }

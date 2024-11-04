@@ -263,7 +263,7 @@ body .blinking.active {width: 100%; height: 100vh; display: block; position: fix
     .contact {grid-template-columns: repeat(1, 1fr);}
     .contact-text h2 { font-size: 42px;}
     .services .sub-title {font-size:42px; padding:0px;}
-    .services .container {padding:90px 32px 16px 32px;}
+    .services .container {padding:90px 32px 50px 32px;}
     .main-text {padding-top:0px; margin-top: 0px;}
     .main-text h2 {font-size: 42px; margin-bottom: 24px;}
     .iconToggle {display:inline; float:right; color: #fff; margin-top:4px; cursor: pointer;}

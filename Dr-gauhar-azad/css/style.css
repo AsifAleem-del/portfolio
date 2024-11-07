@@ -34,6 +34,8 @@ footer {background-color:darkslateblue; color:#fff;}
 
 
 @media(max-width:780px) {
+    .carousel .carousel-inner img {width:100% !important; float: none;}
+    .navbar-nav .nav-item a.book-appointment {position: relative; left: 16px; right: auto; margin-bottom: 20px;}
     .about-section img {width: 100%;} 
     .carousel .carousel-inner h2 {top:auto; bottom: 0px; left: 50%; text-align: center;}
     .book-appointment .book-appointment-img {height: 380px;}

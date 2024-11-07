@@ -1,8 +1,8 @@
 .navbar-nav .nav-item .nav-link {padding: 0 24px;}
-.navbar-nav .nav-item a.book-appointment {position:absolute; right:16px; top:12px; background-color: #fff; color: #333;}
+.navbar-nav .nav-item a.book-appointment {position:absolute; right:16px; top:12px; padding:4px 8px; font-size: 14px; background-color: #fff; color: #333;}
 .carousel {height: calc(100vh - 56px); overflow: hidden; background-color: #000;}
 .carousel .carousel-inner {height: 100%;}
-.carousel .carousel-inner img {height: 100%; width: auto !important; float:right; position: relative;}
+.carousel .carousel-inner img {height:80%; width:auto !important; position:absolute; right: 24px; bottom: 0px;}
 .carousel .carousel-inner .carousel-item {height: 100% !important; background-image: url(../img/bg-img.png); background-repeat: no-repeat; background-size:contain;}
 .carousel .carousel-inner .carousel-item::before {content: ''; position: absolute; width: 100%; height: 100%; background-color: #000; opacity:0.7;}
 .carousel .carousel-inner h2 {color: #fff; position: absolute; top:42%; left:30%; transform: translate(-50%, -50%);}
@@ -34,14 +34,16 @@ footer {background-color:darkslateblue; color:#fff;}
 
 
 @media(max-width:780px) {
-    .carousel .carousel-inner img {width:100% !important; float: none;}
+    .carousel .carousel-inner img {width:100% !important; right: 0px;}
+    .carousel .carousel-inner h2 {background:rgba(0, 0, 0, 0.8); padding:18px;}
     .navbar-nav .nav-item a.book-appointment {position: relative; left: 16px; right: auto; margin-bottom: 20px;}
     .about-section img {width: 100%;} 
     .carousel .carousel-inner h2 {top:auto; bottom: 0px; left: 50%; text-align: center;}
     .book-appointment .book-appointment-img {height: 380px;}
     .book-appointment {padding:8px;}
     .book-appointment .form-container {left:100px; top:120px;}
-    .book-appointment .form-container h3.heading {white-space: nowrap; font-size: 18px;}
+    .book-appointment .form-container h3.heading {white-space: nowrap; font-size: 18px; top:-40px;}
     .book-appointment .form-container form .row .col-sm-6 { margin-bottom:16px;}
     .services .custom-container .box {margin:0px;}
+    .carousel .carousel-inner .carousel-item {background-size: cover;}
 }

@@ -30,6 +30,7 @@
 .book-appointment .form-container h3.heading {position:absolute; top:-70px; left:50%; transform:translateX(-50%); text-shadow:3px 3px 0px #646464;}
 .book-appointment .form-container form .row .col-sm-6 { margin-bottom:24px;}
 footer {background-color:darkslateblue; color:#fff;}
+footer .social-icon a {color:aquamarine; padding:0px 8px;}
 .mr-b-0 {margin-bottom: 0px;} .fs14 {font-size:14px;} .fs16 {font-size: 16px;} .bg-darkcyan {background-color:darkcyan;}
 .m-view-social-icons {display: none;}
 
@@ -37,17 +38,18 @@ footer {background-color:darkslateblue; color:#fff;}
     .carousel .carousel-inner img {width:100% !important; right: 0px;}
     .navbar-nav .nav-item a.book-appointment {position: relative; left: 16px; right: auto; margin-bottom: 20px;}
     .about-section img {width: 100%;} 
-    .carousel .carousel-inner h2 {width: 100%; top:auto; bottom: 0px; left:0; text-align: center; background:rgba(0, 0, 0, 0.8); padding:18px; transform:translate(-0%, -50%);}
+    .carousel .carousel-inner h2 {width: 100%; top:auto; bottom: 0px; left:0; text-align: center; background:rgba(0, 0, 0, 0.5); padding:8px 18px; font-size: 16px; transform:translate(-0%, -50%);}
     .book-appointment .book-appointment-img {height: 380px;}
     .book-appointment {padding:8px;}
     .book-appointment .form-container {left:100px; top:120px;}
-    .book-appointment .form-container h3.heading {white-space: nowrap; font-size: 18px; top:-40px;}
+    .book-appointment .form-container h3.heading {white-space: nowrap; font-size: 18px; top:-40px; text-shadow:1px 1px 0px #646464;}
     .book-appointment .form-container form .row .col-sm-6 { margin-bottom:16px;}
     .services .custom-container .box {margin:0px;}
     .carousel .carousel-inner .carousel-item {background-size: cover;}
     .m-view-social-icons {display: flex; justify-content: center; position: fixed; bottom: 0px; left: 0px; width: 100%; background:dodgerblue; z-index:9;}
-  .m-view-social-icons a {color: #fff; font-size:20px; display: inline-block; padding:8px 16px; text-decoration: none; text-align: center;}
-  .m-view-social-icons a .icon-text {display:block; font-size:12px; padding-top:2px;}
+  .m-view-social-icons a {color: #fff; font-size:20px; display: inline-block; padding:6px 16px; text-decoration: none; text-align: center;}
+  .m-view-social-icons a .icon-text {display:block; font-size:12px; margin-top:-4px;}
   .m-view-social-icons a i.fa-solid.fa-phone {font-size:17px;}
   .m-view-hidden {display: none;}
+  footer {padding-bottom: 40px;}
 }

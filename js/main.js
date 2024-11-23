@@ -104,11 +104,11 @@ let ctx = canvas.getContext('2d');
 
 let dots = [];
 let arrayColors = ['#ccc', '#545454', '#596d91', '#bb5a68', '#696541'];  
-for (let index = 0; index < 70; index++){
+for (let index = 0; index < 80; index++){
   dots.push({
     x: Math.floor(Math.random() * canvas.width),
     y: Math.floor(Math.random() * canvas.height),
-    size: Math.random() * 3 + 5,
+    size: Math.random() * 1 + 2,
     color: arrayColors[Math.floor(Math.random()*5)]
   });
 }

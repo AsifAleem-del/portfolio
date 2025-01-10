@@ -39,10 +39,10 @@ body#themeColorMode.active #about .animatedBox div {z-index: 9;}
 body#themeColorMode.active .about {background-color:#ececec;}
 .about-img {display: flex; justify-content: center;}
 .about-img img {max-width:80%; height: auto; width: 100%;}
-.about-text h2 {font-size: 60px;}
-.about-text h2 span {color:#0ef}
+.about-text div.aboutMe {font-size: 60px; font-weight: bold;}
+.about-text div.aboutMe span {color:#0ef}
 body#themeColorMode.active .about-text h2 span {color:#0585e5}
-.about-text .hFourText {font-size: 29px; font-weight: 600; color: #fff; line-height: 1.7; margin: 15px 0 30px;}
+.about-text .hFourText {font-size: 29px; font-weight: 600; color: #fff; line-height: 1.7; margin:0px;}
 body#themeColorMode.active .about-text .hFourText {color: #333;}
 .about-text p {color: aliceblue; font-size:14px; line-height:20px; margin-bottom:16px;}
 .about-text p.mr-b-8 {margin-bottom:8px;}
@@ -62,8 +62,8 @@ body#themeColorMode.active .sub-title span {color: #0585e5;}
 .services .services-list div::after {z-index: -1; content: ''; position: absolute; width: 100%; height: 100%; background: #111; left: 0; top: 0; border-radius: 20px;}
 body#themeColorMode.active .services .services-list div {background-color: #111; box-shadow: unset;}
 .services .services-list div span i {font-size: 50px; margin-bottom: 30px;}
-.services .services-list div h2 {font-size:24px; font-weight:500; margin-bottom:12px;}
-.services .services-list div h2 + p {line-height:22px;}
+.services .services-list div h3 {font-size:24px; font-weight:500; margin-bottom:12px;}
+.services .services-list div h3 + p {line-height:22px;}
 .services .services-list div a {text-decoration: none; color:#000; font-size: 12px; margin-top:20px; display: inline-block;}
 .services .services-list div a {text-decoration: none; color:#000; font-size: 12px; margin-top:20px; display: inline-block;}
 .services .services-list div a.read {display: inline-block; padding: 12px; background: #081b29; border-radius: 40px; font-size: 16px; color: #0ef; letter-spacing: 1px; text-decoration: none; font-weight: 600; opacity: 0; animation: slideTop 1s ease forwards; animation-delay: 2s; box-shadow: 0 0 5px #0ef, 0 0 25px #0ef;} 
@@ -116,8 +116,8 @@ body#themeColorMode.active .path {stroke:#0585e5; }
 .path-3 {animation: animate-path3 1s 1s linear forwards;}
 .path-4 {animation: animate-path4 1s 1s linear forwards;}
 .portfolio {position:relative; top:150px; padding-top:100px;}
-.main-text h2 {font-size: 60px; line-height: 1; text-align: center; margin-bottom: 32px;}
-.main-text h2 span {color: #0ef;}
+.main-text h3 {font-size: 60px; line-height: 1; text-align: center; margin-bottom: 32px;}
+.main-text h3 span {color: #0ef;}
 body#themeColorMode.active .main-text h2 span {color: #0585e5;}
 .portfolio-content {display: grid; gap: 0px; padding: 0px 30px; grid-template-columns: repeat(auto-fit, minmax(350px, auto));}
 .portfolio-content .row {position:relative; width: 350px; height:300px; overflow: hidden; border-radius: 8px; cursor: pointer;}
@@ -134,9 +134,9 @@ body#themeColorMode.active .main-text h2 span {color: #0585e5;}
 body#themeColorMode.active .company-logo .companies-logo {border:solid 1px #ccc;}
 .contact {display: grid; grid-template-columns: repeat(2, 1fr); align-items: center; gap: 3rem; padding:60px 32px; margin-top:230px;}
 body#themeColorMode.active .contact { background-color:#ececec;}
-.contact-text h2 {font-size:60px; line-height: 1; text-align: center; margin:0px 0px 50px 0px;}
-.contact-text h2 span {color: #0ef;}
-body#themeColorMode.active .contact-text h2 span {color: #0585e5;}
+.contact-text h3 {font-size:60px; line-height: 1; text-align: center; margin:0px 0px 50px 0px;}
+.contact-text h3 span {color: #0ef;}
+body#themeColorMode.active .contact-text h3 span {color: #0585e5;}
 .contact-text h4 {margin: 15px 0; color:rgb(228,228,228); font-size: 20px; font-weight: 600;}
 body#themeColorMode.active .contact-text h4 {color: #000;}
 .contact-text p {color: rgb(177, 177, 177); font-size: 20px; line-height: 30px; margin-bottom: 2rem;}
@@ -266,11 +266,11 @@ body .blinking.active {width: 100%; height: 100vh; display: block; position: fix
     .skill .container {width:100%; height: auto; padding:75px 20px; margin-left:0px;}
     .skill .sub-title {font-size: 42px; padding:24px;}
     .contact {grid-template-columns: repeat(1, 1fr);}
-    .contact-text h2 { font-size: 42px;}
+    .contact-text h3 { font-size: 42px;}
     .services .sub-title {font-size:42px; padding:0px;}
     .services .container {padding:90px 32px 50px 32px;}
     .main-text {padding-top:0px; margin-top: 0px;}
-    .main-text h2 {font-size: 42px; margin-bottom: 24px;}
+    .main-text h3 {font-size: 42px; margin-bottom: 24px;}
     .iconToggle {display:inline; float:right; color: #fff; margin-top:4px; cursor: pointer;}
   .iconToggle i {font-size:24px; color: #fff;}
   .iconToggle i.menuIcon {display:inline-block;}

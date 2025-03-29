@@ -319,17 +319,23 @@ body#themeColorMode.active .blog-container .blog-wrapper {background:#fff;}
     .home {flex-direction: column; height: auto; padding-top: 80px; padding-bottom: 40px;}
     .home .profile-pic {display:flex; justify-content:center;}
     .home .home-content {text-align: center;}
+    .home-content h1 {font-size:32px;}
     .home-content h3 {font-size: 28px;}
+    .home-content .hText {font-size:24px;}
+    .home-content p {font-size: 16px; line-height: 24px;}
+    .about-text div.aboutMe {font-size: 32px;}
+    .about-text .hFourText {font-size: 18px;}
+    .about-text p {font-size: 13px;}
     .about {grid-template-columns: repeat(1, 1fr);}
     .skill .skillContainer {flex-direction: column;}
     .skill .container {width:100%; height: auto; padding:75px 20px; margin-left:0px;}
-    .skill .sub-title {font-size: 42px; padding:24px;}
+    .skill .sub-title {font-size:32px; padding:24px;}
     .contact {grid-template-columns: repeat(1, 1fr);}
-    .contact-text h3 { font-size: 42px;}
-    .services .sub-title {font-size:42px; padding:0px;}
+    .contact-text h3 { font-size:32px;}
+    .services .sub-title {font-size:32px; padding:0px;}
     .services .container {padding:90px 32px 50px 32px;}
     .main-text {padding-top:0px; margin-top: 0px;}
-    .main-text h3 {font-size: 42px; margin-bottom: 24px;}
+    .main-text h3 {font-size:32px; margin-bottom: 24px;}
     .iconToggle {display:inline; float:right; color: #fff; margin-top:4px; cursor: pointer;}
   .iconToggle i {font-size:24px; color: #fff;}
   .iconToggle i.menuIcon {display:inline-block;}
@@ -378,4 +384,6 @@ body#themeColorMode.active .blog-container .blog-wrapper {background:#fff;}
   .blogs-container .blogs-wrapper .blogs-box .text-contain h2 a {font-size: 12px;}
   .blogs-container .blogs-wrapper .blogs-box .text-contain .text-footer {padding-bottom: 4px;}
   .blogs-container .blogs-wrapper {padding:0px;}
+  .last-text p {font-size: 12px; padding: 20px 0px;}
+  .contact-text p.subText {font-weight: normal;}
 }

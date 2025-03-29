@@ -246,37 +246,5 @@
     
     <div class="toast">Message here</div>
     <script src="../js/main.js"></script>
-    <script>
-        // Function to copy the current page URL to the clipboard
-        document.getElementById('copyButton').addEventListener('click', function() {
-            // Get the current page URL
-            var currentURL = window.location.href;
-
-            // Create a temporary input element to hold the URL
-            var tempInput = document.createElement('input');
-            tempInput.value = currentURL;
-            document.body.appendChild(tempInput);
-
-            // Select the content in the input
-            tempInput.select();
-            tempInput.setSelectionRange(0, 99999);  // For mobile devices
-
-            // Execute the copy command
-            document.execCommand('copy');
-
-            // Remove the temporary input element
-            document.body.removeChild(tempInput);
-
-            // Display success message
-            var messageElement = document.getElementById('message');
-            messageElement.textContent = 'URL copied to clipboard!';
-            messageElement.style.color = 'green';
-
-            // Optional: Clear the success message after 3 seconds
-            setTimeout(function() {
-                messageElement.textContent = '';
-            }, 3000);
-        });
-    </script>
 </body>
 </html>

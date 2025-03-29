@@ -377,4 +377,5 @@ body#themeColorMode.active .blog-container .blog-wrapper {background:#fff;}
   .blogs-container .blogs-header .box .text h1 {margin-top:80px; font-size:14px; padding-right:16px;}
   .blogs-container .blogs-wrapper .blogs-box .text-contain h2 a {font-size: 12px;}
   .blogs-container .blogs-wrapper .blogs-box .text-contain .text-footer {padding-bottom: 4px;}
+  .blogs-container .blogs-wrapper {padding:0px;}
 }

@@ -78,7 +78,7 @@
     </header>
     <!-- Blog container section start from here -->
     <section class="blogs-container">
-        
+        <p class="message" id="message"></p>
         <div class="blogs-wrapper">
             <div class="blogs-box flex-dc">
                 <div class="blogs-header">
@@ -89,21 +89,19 @@
                             <p class="date-text"><span>15 Jan 2025</span></p>
                         </div>
                         <div class="social-share-container">
-                            <a href="" class="facebook-btn" target="_blank">
+                            <!-- <a href="https://www.facebook.com/sharer/sharer.php?u=https://asifaleem-del.github.io/portfolio/blogs/Understanding-UI-UX-Design.html" class="facebook-btn" target="_blank">
                                 <i class="fa-brands fa-square-facebook"></i>
-                            </a>
-                            <a href="" class="twitter-btn" target="_blank">
+                            </a> -->
+                            <a href="https://twitter.com/intent/tweet?url=https://asifaleem-del.github.io/portfolio/blogs/Understanding-UI-UX-Design.html&text=Check%20this%20out!" class="twitter-btn" target="_blank">
                                 <i class="fa-brands fa-square-x-twitter"></i>
                             </a>
-                            <a href="" class="WhatsApp-btn" target="_blank">
+                            <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://asifaleem-del.github.io/portfolio/blogs/Understanding-UI-UX-Design.html" target="_blank" class="social-button linkedin">
+                                <i class="fa-brands fa-linkedin"></i>
+                            </a>
+                            <a href="https://wa.me/?text=Check%20this%20out!%20https://asifaleem-del.github.io/portfolio/blogs/Understanding-UI-UX-Design.html" class="WhatsApp-btn" target="_blank">
                                 <i class="fa-brands fa-square-whatsapp"></i>
                             </a>
-                            <a href="" class="telegram-btn" target="_blank">
-                                <i class="fa-brands fa-telegram"></i>
-                            </a>
-                            <a href="" class="telegram-btn" target="_blank">
-                                <i class="fa-solid fa-square-share-nodes"></i>
-                            </a>
+                            <a href="javascript:void(0)" class="copy-button" id="copyButton"><i class="fa-solid fa-square-share-nodes"></i></a>
                         </div>
                     </div>
                 </div>
@@ -249,52 +247,36 @@
     <div class="toast">Message here</div>
     <script src="../js/main.js"></script>
     <script>
-        const facebookBtn = document.querySelector(
-            ".social-share-container .facebook-btn"
-        );
-        const twitterBtn = document.querySelector(
-            ".social-share-container .twitter-btn"
-        );
-        const whatsAppBtn = document.querySelector(
-            ".social-share-container .whatsApp-btn"
-        );
-        const telegramBtn = document.querySelector(
-            ".social-share-container .telegram-btn"
-        );
-        const shareBtn = document.querySelector(
-            ".social-share-container .share-btn"
-        );
+        // Function to copy the current page URL to the clipboard
+        document.getElementById('copyButton').addEventListener('click', function() {
+            // Get the current page URL
+            var currentURL = window.location.href;
 
-        const toast = document.querySelector(".toast");
+            // Create a temporary input element to hold the URL
+            var tempInput = document.createElement('input');
+            tempInput.value = currentURL;
+            document.body.appendChild(tempInput);
 
-        const url = encodeURIComponent(window.location.href);
-        const title = encodeURIComponent(document.title);
-        const shareLink = window.location.href;
+            // Select the content in the input
+            tempInput.select();
+            tempInput.setSelectionRange(0, 99999);  // For mobile devices
 
-        facebookBtn.href = `https://www.facebook.com/sharer.php?u=${url}`;
-        twitterBtn.href = `https://twitter.com/intent/tweet?url=${url}&text=${title}`;
-        whatsAppBtn.href = `https://api.whatsapp.com/send?text=${title}:${url}`;
-        telegramBtn.href = `https://t.me/share/url?url=${url}&text=${title}`;
+            // Execute the copy command
+            document.execCommand('copy');
 
-        const displayToast = (message) => {
-            toast.textContent = message;
-            toast.classList.add("active");
-            setTimeout(() => {
-                toast.classList.remove("active");
+            // Remove the temporary input element
+            document.body.removeChild(tempInput);
+
+            // Display success message
+            var messageElement = document.getElementById('message');
+            messageElement.textContent = 'URL copied to clipboard!';
+            messageElement.style.color = 'green';
+
+            // Optional: Clear the success message after 3 seconds
+            setTimeout(function() {
+                messageElement.textContent = '';
             }, 3000);
-        };
-
-        shareBtn.addEventListener("click", (e) => {
-            e.preventDefault();
-            navigator.clipboard
-            .writeText(shareLink)
-            .then(() => {
-                displayToast("Link copied");
-            })
-            .catch(() => displayToast("Error copying link"));
         });
-
-
     </script>
 </body>
 </html>

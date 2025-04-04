@@ -315,9 +315,10 @@ body#themeColorMode.active .blog-container .blog-wrapper {background:#fff;}
 .d-flex {display: flex;} .flex-dc {flex-direction: column;} .border {border: solid 1px #ccc;} .mt-12 {margin-top:12px;} .mb-16 {margin-bottom:16px;} .b-shadow {box-shadow:0px 0px 7px #bebebe}
 /* Blog css end here */
 
-.social-share-container {position: absolute; top:8px; right:8px; text-align: center; border-radius: 4px; padding:4px;  background: #fff;}
-.social-share-container a {font-size: 36px; display: block;}
-.message {margin-top: 10px; font-size: 14px; color: #333;}
+.social-share-container {position: absolute; top:8px; right:8px; text-align: center; border-radius: 4px; padding:4px 8px;  background: #000;}
+.social-share-container a {font-size:32px; display: block; color:#fff;}
+.message {position: absolute; right: 50px; bottom:6px; font-size: 14px; white-space: nowrap; background: #000; color: #fff; text-align: center; z-index: 99; border-radius: 4px;}
+.message.padding {padding:8px 16px;}
 
 @media(max-width:780px) {
     .home {flex-direction: column; height: auto; padding-top: 80px; padding-bottom: 40px;}

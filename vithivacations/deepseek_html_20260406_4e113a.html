@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=yes">
+  <title>Vista Voyage | Explore India in Style</title>
+  <!-- Google Fonts & Font Awesome -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #ffffff;
+      color: #1e2a3e;
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+    }
+
+    /* Color variables */
+    :root {
+      --primary: #00aff0;
+      --secondary: #ea6836;
+      --tertiary: #b8b9bb;
+      --dark: #1f2a44;
+      --light-bg: #f8fafc;
+      --shadow: 0 20px 35px -10px rgba(0,0,0,0.08);
+      --transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Buttons & CTA */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 28px;
+      border-radius: 40px;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: var(--transition);
+      cursor: pointer;
+      border: none;
+      background: none;
+      text-decoration: none;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: white;
+      box-shadow: 0 6px 14px rgba(0, 175, 240, 0.25);
+    }
+
+    .btn-primary:hover {
+      background: #0095d0;
+      transform: translateY(-2px);
+      box-shadow: 0 12px 20px rgba(0, 175, 240, 0.35);
+    }
+
+    .btn-secondary {
+      background: var(--secondary);
+      color: white;
+      box-shadow: 0 6px 14px rgba(234, 104, 54, 0.25);
+    }
+
+    .btn-secondary:hover {
+      background: #d4552c;
+      transform: translateY(-2px);
+    }
+
+    .btn-outline-light {
+      border: 2px solid white;
+      background: transparent;
+      color: white;
+      backdrop-filter: blur(2px);
+    }
+
+    .btn-outline-light:hover {
+      background: white;
+      color: var(--primary);
+    }
+
+    /* Floating WhatsApp & social icons fixed */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      background-color: #25D366;
+      color: white;
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      z-index: 1000;
+      transition: 0.2s ease;
+      text-decoration: none;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.05);
+      background-color: #20b859;
+    }
+
+    /* Social media icons row (desktop + mobile friendly) */
+    .social-side {
+      position: fixed;
+      left: 20px;
+      bottom: 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      z-index: 1000;
+    }
+
+    .social-side a {
+      background: white;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--primary);
+      font-size: 22px;
+      box-shadow: 0 5px 12px rgba(0,0,0,0.1);
+      transition: 0.2s;
+      text-decoration: none;
+    }
+
+    .social-side a:hover {
+      transform: translateY(-4px);
+      background: var(--primary);
+      color: white;
+    }
+
+    /* Hero banner */
+    .hero {
+      background: linear-gradient(107deg, #001f2f 0%, #003e5e 100%), url('https://images.unsplash.com/photo-1524492412937-b28074a5d7da?q=80&w=2071&auto=format') center/cover no-repeat;
+      background-blend-mode: overlay;
+      min-height: 85vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      border-radius: 0 0 40px 40px;
+    }
+
+    .hero-content {
+      max-width: 650px;
+      color: white;
+      padding: 40px 0;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.2rem, 6vw, 3.8rem);
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 32px;
+      opacity: 0.9;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+
+    /* Services section */
+    .section-title {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 48px;
+      text-align: center;
+      position: relative;
+    }
+    .section-title span {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin: 40px 0;
+    }
+
+    .service-card {
+      background: white;
+      padding: 32px 20px;
+      border-radius: 32px;
+      text-align: center;
+      transition: var(--transition);
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(0,175,240,0.1);
+    }
+    .service-card:hover {
+      transform: translateY(-10px);
+      border-color: var(--primary);
+    }
+    .service-icon {
+      font-size: 48px;
+      color: var(--primary);
+      margin-bottom: 20px;
+    }
+    .service-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 12px;
+    }
+
+    /* Gallery Tabs */
+    .gallery-tabs {
+      background: var(--light-bg);
+      border-radius: 60px;
+      padding: 8px;
+      display: inline-flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 40px;
+    }
+    .tab-btn {
+      background: transparent;
+      border: none;
+      padding: 12px 28px;
+      font-weight: 600;
+      font-size: 1rem;
+      border-radius: 40px;
+      cursor: pointer;
+      transition: 0.2s;
+      color: #2c3e50;
+    }
+    .tab-btn.active {
+      background: var(--primary);
+      color: white;
+      box-shadow: 0 6px 14px rgba(0,175,240,0.3);
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 24px;
+      margin-top: 20px;
+    }
+    .gallery-item {
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: 0 12px 28px rgba(0,0,0,0.08);
+      transition: 0.3s ease;
+      background: white;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeUp 0.5s forwards;
+    }
+    @keyframes fadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      transition: transform 0.4s;
+    }
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+    .gallery-caption {
+      padding: 16px;
+      font-weight: 500;
+      text-align: center;
+    }
+    .appreciation-card {
+      background: white;
+      border-radius: 28px;
+      padding: 24px;
+      text-align: center;
+      box-shadow: var(--shadow);
+      border-left: 6px solid var(--secondary);
+    }
+
+    /* Contact Modal */
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.7);
+      backdrop-filter: blur(6px);
+      z-index: 2000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      visibility: hidden;
+      opacity: 0;
+      transition: visibility 0.2s, opacity 0.2s;
+    }
+    .modal-overlay.active {
+      visibility: visible;
+      opacity: 1;
+    }
+    .contact-modal {
+      background: white;
+      max-width: 480px;
+      width: 90%;
+      border-radius: 48px;
+      padding: 32px 28px;
+      position: relative;
+      transform: scale(0.95);
+      transition: transform 0.3s cubic-bezier(0.34, 1.2, 0.64, 1);
+    }
+    .modal-overlay.active .contact-modal {
+      transform: scale(1);
+    }
+    .close-modal {
+      position: absolute;
+      top: 20px;
+      right: 24px;
+      font-size: 28px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: var(--tertiary);
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .form-group input, .form-group textarea {
+      width: 100%;
+      padding: 14px 18px;
+      border-radius: 32px;
+      border: 1px solid #ddd;
+      font-family: inherit;
+      transition: 0.2s;
+    }
+    .form-group input:focus, .form-group textarea:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(0,175,240,0.2);
+    }
+    .submit-btn {
+      background: var(--primary);
+      width: 100%;
+      padding: 14px;
+      border: none;
+      border-radius: 40px;
+      font-weight: bold;
+      color: white;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    footer {
+      background: #0a1927;
+      color: #aaa;
+      padding: 32px 0;
+      text-align: center;
+      margin-top: 70px;
+    }
+
+    @media (max-width: 680px) {
+      .container {
+        padding: 0 20px;
+      }
+      .hero-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .social-side {
+        left: 12px;
+        bottom: 20px;
+        gap: 8px;
+      }
+      .social-side a {
+        width: 38px;
+        height: 38px;
+        font-size: 18px;
+      }
+      .whatsapp-float {
+        width: 52px;
+        height: 52px;
+        font-size: 28px;
+        right: 18px;
+        bottom: 20px;
+      }
+      .tab-btn {
+        padding: 8px 20px;
+        font-size: 0.85rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Floating WhatsApp Button -->
+<a href="https://wa.me/919876543210?text=Hello%20I%20want%20to%20know%20more%20about%20your%20tours" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<!-- Social Icons Left Side -->
+<div class="social-side">
+  <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+  <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+  <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+  <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+</div>
+
+<!-- Hero Banner Section -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <h1>Discover Incredible <span style="color:var(--secondary);">India</span> with Vista Voyage</h1>
+      <p>Tailored journeys, cultural wonders, and seamless experiences — from majestic palaces to business retreats.</p>
+      <div class="hero-buttons">
+        <button class="btn btn-primary" id="openContactBtn"><i class="fas fa-envelope"></i> Get In Touch</button>
+        <a href="#services" class="btn btn-outline-light"><i class="fas fa-chevron-down"></i> Explore Services</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services Section -->
+<div class="container" id="services">
+  <div class="section-title" style="margin-top: 70px;">
+    Our <span>Premium Services</span>
+  </div>
+  <div class="services-grid">
+    <div class="service-card"><div class="service-icon"><i class="fas fa-map-marked-alt"></i></div><h3>India Tour</h3><p>Heritage, wildlife & luxury circuits across Incredible India.</p></div>
+    <div class="service-card"><div class="service-icon"><i class="fas fa-calendar-check"></i></div><h3>Events</h3><p>Destination weddings, conferences, and private celebrations.</p></div>
+    <div class="service-card"><div class="service-icon"><i class="fas fa-briefcase"></i></div><h3>For Business Travelers</h3><p>Seamless corporate travel, meet & greet, premium stays.</p></div>
+    <div class="service-card"><div class="service-icon"><i class="fas fa-passport"></i></div><h3>For Embassy Guest</h3><p>VIP protocol, diplomatic logistics & secure transport.</p></div>
+    <div class="service-card"><div class="service-icon"><i class="fas fa-fire"></i></div><h3>Hot Deals</h3><p>Limited packages with massive savings & exclusive perks.</p></div>
+  </div>
+</div>
+
+<!-- Gallery Section with Tabs (animation) -->
+<div class="container" style="margin-top: 50px;">
+  <div class="section-title">Visual <span>Moments</span></div>
+  <div style="display: flex; justify-content: center;">
+    <div class="gallery-tabs">
+      <button class="tab-btn active" data-tab="guest">Our Guest Picture</button>
+      <button class="tab-btn" data-tab="event">Our Event Picture</button>
+      <button class="tab-btn" data-tab="letter">Appreciation Letter</button>
+    </div>
+  </div>
+  <div id="galleryContainer" class="gallery-grid"></div>
+</div>
+
+<!-- Call to Action Button Section (Additional CTA) -->
+<div style="background: linear-gradient(120deg, var(--primary) 0%, #0077b3 100%); margin: 60px 0 20px; border-radius: 48px; padding: 48px 28px; text-align: center; color: white;">
+  <div class="container">
+    <h2 style="font-size: 1.9rem;">Ready to plan your journey?</h2>
+    <p style="margin: 16px 0 24px; font-size: 1.1rem;">Let's craft an unforgettable experience — whether leisure, business, or special event.</p>
+    <button class="btn btn-secondary" id="ctaContactBtn" style="background: white; color: var(--secondary);"><i class="fas fa-phone-alt"></i> Request a Callback</button>
+  </div>
+</div>
+
+<!-- Contact Modal (Popup with animation) -->
+<div id="contactModal" class="modal-overlay">
+  <div class="contact-modal">
+    <button class="close-modal" id="closeModalBtn"><i class="fas fa-times"></i></button>
+    <h3 style="font-size: 1.8rem; margin-bottom: 16px; color: var(--primary);">Let's Connect</h3>
+    <p style="margin-bottom: 24px;">Share your details, our team will reach out soon!</p>
+    <form id="contactForm">
+      <div class="form-group"><input type="text" placeholder="Full Name" required id="nameInput"></div>
+      <div class="form-group"><input type="email" placeholder="Email Address" required id="emailInput"></div>
+      <div class="form-group"><input type="tel" placeholder="Phone Number" required id="phoneInput"></div>
+      <div class="form-group"><textarea rows="3" placeholder="Tell us about your travel needs..."></textarea></div>
+      <button type="submit" class="submit-btn"><i class="fas fa-paper-plane"></i> Send Message</button>
+    </form>
+    <p id="formFeedback" style="margin-top: 16px; font-size: 0.85rem; text-align: center; color: var(--secondary);"></p>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <p>© 2025 Vista Voyage — Crafting journeys across India. | <i class="fas fa-heart" style="color: var(--secondary);"></i> Explore with us</p>
+  </div>
+</footer>
+
+<script>
+  // ---------- GALLERY DATA (dynamic tabs with animation) ----------
+  const galleryData = {
+    guest: {
+      title: "Our Guest Picture",
+      items: [
+        { type: "img", src: "https://images.unsplash.com/photo-1533106418989-88406c7cc8ca?w=400&h=300&fit=crop", caption: "Family trip to Udaipur" },
+        { type: "img", src: "https://images.unsplash.com/photo-1588515712508-bab7dfdd32e1?w=400&h=300&fit=crop", caption: "Sunset at Taj Mahal" },
+        { type: "img", src: "https://images.unsplash.com/photo-1587474260584-136574528ed5?w=400&h=300&fit=crop", caption: "Jaipur royal experience" },
+        { type: "img", src: "https://images.unsplash.com/photo-1590523741831-ab7e5b8e6a9f?w=400&h=300&fit=crop", caption: "Kerala backwaters" }
+      ]
+    },
+    event: {
+      title: "Our Event Picture",
+      items: [
+        { type: "img", src: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=400&h=300&fit=crop", caption: "Corporate gala dinner" },
+        { type: "img", src: "https://images.unsplash.com/photo-1464366400600-7168b4af0bc0?w=400&h=300&fit=crop", caption: "Destination wedding Goa" },
+        { type: "img", src: "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=400&h=300&fit=crop", caption: "Team building retreat" },
+        { type: "img", src: "https://images.unsplash.com/photo-1566737236500-c8ac43014a67?w=400&h=300&fit=crop", caption: "Music festival collaboration" }
+      ]
+    },
+    letter: {
+      title: "Appreciation Letter",
+      items: [
+        { type: "letter", content: "🌟 “Vista Voyage made our India tour seamless and magical. Every detail was perfect! Highly recommend for embassy guests.” — British High Commission", icon: "fas fa-star" },
+        { type: "letter", content: "🏆 “Best business travel agency! Punctual, professional, and outstanding hospitality.” — Global IT Solutions", icon: "fas fa-trophy" },
+        { type: "letter", content: "📜 “Our corporate event was a grand success thanks to their flawless planning. Thank you team!” — Fintech Leaders Summit", icon: "fas fa-medal" },
+        { type: "letter", content: "💌 “Incredible support and warm welcome for our guests. The hot deals are truly unmatched.” — Delhi Embassy Staff", icon: "fas fa-heart" }
+      ]
+    }
+  };
+
+  const galleryContainer = document.getElementById('galleryContainer');
+  let activeTab = 'guest';
+
+  function renderGallery(tabId) {
+    const data = galleryData[tabId];
+    if (!data) return;
+    galleryContainer.innerHTML = '';
+    // add animation class to each new item (already via CSS keyframes)
+    data.items.forEach((item, idx) => {
+      let cardDiv = document.createElement('div');
+      cardDiv.className = 'gallery-item';
+      cardDiv.style.animationDelay = `${idx * 0.05}s`;
+      if (item.type === 'img') {
+        cardDiv.innerHTML = `
+          <img src="${item.src}" alt="${item.caption}" loading="lazy">
+          <div class="gallery-caption">${item.caption}</div>
+        `;
+      } else {
+        // appreciation letter style card
+        cardDiv.classList.add('appreciation-card');
+        cardDiv.innerHTML = `
+          <i class="${item.icon || 'fas fa-envelope-open-text'}" style="font-size: 40px; color: var(--secondary); margin-bottom: 16px; display: inline-block;"></i>
+          <p style="font-style: italic; margin: 12px 0;">“${item.content}”</p>
+          <div style="margin-top: 12px; color: var(--primary); font-weight: 500;"><i class="fas fa-pen-fancy"></i>  Verified Guest</div>
+        `;
+      }
+      galleryContainer.appendChild(cardDiv);
+    });
+  }
+
+  // Tab switching with animation transition
+  const tabBtns = document.querySelectorAll('.tab-btn');
+  tabBtns.forEach(btn => {
+    btn.addEventListener('click', function() {
+      const tabId = this.getAttribute('data-tab');
+      if (!tabId) return;
+      tabBtns.forEach(b => b.classList.remove('active'));
+      this.classList.add('active');
+      activeTab = tabId;
+      renderGallery(activeTab);
+    });
+  });
+
+  // initial load gallery
+  renderGallery('guest');
+
+  // ---------- CONTACT MODAL LOGIC (animation on click) ----------
+  const modal = document.getElementById('contactModal');
+  const openBtns = [document.getElementById('openContactBtn'), document.getElementById('ctaContactBtn')];
+  const closeBtn = document.getElementById('closeModalBtn');
+  const contactForm = document.getElementById('contactForm');
+  const feedbackSpan = document.getElementById('formFeedback');
+
+  function openModal() {
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+    feedbackSpan.innerHTML = ''; // reset feedback
+  }
+
+  function closeModal() {
+    modal.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  openBtns.forEach(btn => {
+    if (btn) btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      openModal();
+    });
+  });
+
+  closeBtn.addEventListener('click', closeModal);
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) closeModal();
+  });
+
+  // form submission (prevent default, show success)
+  contactForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const name = document.getElementById('nameInput').value.trim();
+    const email = document.getElementById('emailInput').value.trim();
+    const phone = document.getElementById('phoneInput').value.trim();
+    if (!name || !email || !phone) {
+      feedbackSpan.innerHTML = "⚠️ Please fill all required fields.";
+      return;
+    }
+    feedbackSpan.innerHTML = "✅ Thank you! Our travel expert will contact you within 24 hours.";
+    contactForm.reset();
+    setTimeout(() => {
+      if (modal.classList.contains('active')) closeModal();
+      feedbackSpan.innerHTML = "";
+    }, 2000);
+  });
+
+  // responsive touch / additional call to action via scroll + prevent any double clicks
+  const allCtaBtns = document.querySelectorAll('.btn-primary, .btn-secondary, .btn-outline-light');
+  // optional: any other dynamic actions
+
+  // Simple smooth scroll for anchor links (optional)
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const target = this.getAttribute('href');
+      if (target !== "#" && target !== "") {
+        const el = document.querySelector(target);
+        if (el) {
+          e.preventDefault();
+          el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }
+    });
+  });
+
+  // Also add a small entrance animation to service cards on viewport (bonus)
+  const serviceCards = document.querySelectorAll('.service-card');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, { threshold: 0.2 });
+  serviceCards.forEach(card => {
+    card.style.opacity = '0';
+    card.style.transform = 'translateY(20px)';
+    card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+    observer.observe(card);
+  });
+  // trigger immediate for visible cards
+  setTimeout(() => {
+    serviceCards.forEach(card => { if (card.getBoundingClientRect().top < window.innerHeight-100) { card.style.opacity = '1'; card.style.transform = 'translateY(0)'; } });
+  }, 200);
+</script>
+</body>
+</html>
